@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -265,6 +265,17 @@
         });
     </script>
     <script src="./js/common.js"></script>
+    <script>
+        $('.btn-prev').on('click', function () {
+            $('.swiper-button-prev').click()
+            return false;
+        });
+
+        $('.btn-next').on('click', function () {
+            $('.swiper-button-next').click()
+            return false;
+        });
+    </script>
 </body>
 
 </html>
