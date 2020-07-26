@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/llr0eoa.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <title>LEOATH</title>
@@ -19,7 +17,8 @@
 
 <body>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <script>
+        (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -27,18 +26,22 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PDMWD2M');</script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMWD2M" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMWD2M" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager -->
     <!-- header -->
     <section id="header">
         <div class="nav">
             <div class="inner header_inner">
-                <p class="logo"><a href="" class="no_stick_"><img src="./img/logo.svg" alt="ロゴ"><span>LEOATH</span></a>
+                <p class="logo">
+                    <a href="" class="no_stick_"><img src="./img/logo.svg" alt="ロゴ"><span>LEOATH</span></a>
                 </p>
                 <ul class="contents_menu">
                     <li class="menu_item"><a href="">Top</a></li>
-                    <li class="menu_item" id="hover"><a href="">Service<i class="fas fa-angle-down"></i></a>
+                    <li class="menu_item" id="hover">
+                        <a href="">Service<i class="fas fa-angle-down"></i></a>
                         <div id="window">
                             <a href="">Casting</a>
                             <a href="">Web business</a>
@@ -55,7 +58,7 @@
     <!-- End header -->
     <!-- mainvisual -->
     <section id="main">
-        <div class="heading_inner">
+        <div id="particles-js" class="heading_inner">
             <h1 class="header_heading"><img src="./img/heading-2x.png" alt="海辺の画像"></h1>
             <h2 class="subheading">若さとアイデアで新時代に革命を起こす。</h2>
         </div>
@@ -64,8 +67,8 @@
     <!-- about us -->
     <section id="about_us">
         <div class="inner">
-                <h3 class="heading">About Us</h3>
-                <span class="sub_text">私たちについて</span>
+            <h3 class="heading">About Us</h3>
+            <span class="sub_text">私たちについて</span>
         </div>
         <div class="content_wrapper">
             <div class="bg"></div>
@@ -73,8 +76,9 @@
                 <img src="./img/door.jpg" alt="ドアの画像">
                 <div class="content_text">
                     <h4><span class="marker_thin">若さとアイデアで<br>新時代に革命を起こす。</span></h4>
-                    <p>デジタルシフトが進み、多くの情報が飛び交う現代社会の中で正しい情報の取捨選択を行い持ち前の<span class="color_1">若さ</span>を武器に現代社会にあった<span
-                            class="color_1">新しいサービス</span>を切り開く企業を目指します。</p>
+                    <p>
+                        デジタルシフトが進み、多くの情報が飛び交う現代社会の中で正しい情報の取捨選択を行い持ち前の<span class="color_1">若さ</span>を武器に現代社会にあった<span class="color_1">新しいサービス</span>を切り開く企業を目指します。
+                    </p>
                 </div>
             </div>
         </div>
@@ -191,12 +195,16 @@
     </section>
     <!-- End news -->
     <!-- footer -->
-    　　<section id="footer">
+    <section id="footer">
         <div class="inner footer_inner">
             <div class="content_wrapper">
                 <div class="f_logo">
-                    <p class="logo"><a href="" class="no_stick_"><img src="./img/logo.svg"
-                                alt="ロゴ"><span>LEOATH</span></a></p>
+                    <p class="logo">
+                        <a href="" class="no_stick_">
+                            <img src="./img/logo.svg"
+                                 alt="ロゴ"><span>LEOATH</span>
+                        </a>
+                    </p>
                 </div>
                 <div class="address"><span>〒102-0082</span>東京都千田区一番町13-2 一番町KSKビル 3階</div>
             </div>
@@ -222,6 +230,9 @@
         </div>
     </section>
     <!-- End footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="./lib/particles.js"></script>
     <!-- stalker js -->
     <div id="stalker" class="" style="transform: translate(704px, 418px);"></div>
     <!-- End stalker js -->
@@ -265,6 +276,12 @@
         });
     </script>
     <script src="./js/common.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', './lib/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
     <script>
         $('.btn-prev').on('click', function () {
             $('.swiper-button-prev').click()
