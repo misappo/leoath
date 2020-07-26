@@ -1,0 +1,260 @@
+@charset 'utf-8';
+/* -----------------------------------------------------------
+CSS Information
+
+File name:      common.css
+Created:        2020-07
+Style Info:     共有CSS
+----------------------------------------------------------- */
+
+/* ------------------------------------ */
+/* Reset */
+/* ------------------------------------ */
+*,*::before,*::after {
+  box-sizing : border-box;
+}
+html,body {
+  margin : 0;
+  padding : 0;
+}  
+body {
+  color : #000;
+  font-family : '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+  font-size : 16px;
+  line-height : 1.3;
+  letter-spacing : 0;
+  background : #fff;
+  -moz-osx-font-smoothing : grayscale;
+  -webkit-font-smoothing : antialiased;
+}
+img {
+  border : 0;
+  height : auto;
+  max-width : 100%;
+  vertical-align : top;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li,img {
+  margin : 0;
+  padding : 0;
+}
+li {
+  list-style : none;
+}
+a {
+  color : #000;
+  text-decoration : none;
+}
+/* ------------------------------------ */
+/* layout */
+/* ------------------------------------ */
+.inner {
+  max-width : 1238px;
+  margin : 0 auto;
+}
+.content_wrapper {
+  position : relative;
+}
+.fa,.fas {
+  font-weight : 900;
+}
+.fa,.far,.fas {
+  font-family : 'Font Awesome 5 Free';
+}
+/* ------------------------------------ */
+/* header */
+/* ------------------------------------ */
+#header {
+  position : relative;
+}
+.header_inner {
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  padding-left : 27px;
+  padding-right : 27px;
+  height : 76px;
+}
+.header_inner li {
+  display : inline-block;
+  position : relative;
+}
+.nav {
+  background : rgba(255,255,255,.7);
+  z-index : 999;
+  position : fixed;
+  top : 0;
+  left : 0;
+  width : 100%;
+}
+.logo img {
+  width : 48px;
+}
+.logo > a {
+  display : flex;
+  align-items : center;
+}
+.logo span {
+  font-size : 24px;
+  font-family : azo-sans-web, sans-serif;
+  font-style : normal;
+}
+.fa-angle-down {
+  margin-left : 10px;
+}
+.menu_item:not(:last-child) {
+  padding-right : 50px;
+}
+.menu_item a {
+  font-size : 20px;
+  transition : 1s;
+  position : relative;
+  line-height : 35px;
+  display : inline-block;
+}
+.menu_item a::after {
+  position : absolute;
+  transition : .3s;
+  content : '';
+  left : 0;
+  width : 0;
+  bottom : 0;
+  height : 3px;
+  background : #000;
+}
+.menu_item a:hover::after {
+  width : 110%;
+  left : -5%;
+}
+.heading_inner {
+  max-width : 1238px;
+  margin : 0 auto;
+}
+#window {
+  width : 200px;
+  padding : 15px;
+  position : absolute;
+  top : 36px;
+  left : 50px;
+  background : rgba(266,244,244,.25);
+  display : inline-block;
+  transform : translateX(-50%);
+  opacity : 0;
+  transition-property : opacity;
+  transition-duration : .5s;
+  display : none;
+}
+#window a {
+  display : inline-block;
+  height : 30px;
+}
+#window.hover {
+  opacity : 1;
+  display : inline-block;
+}
+#window a {
+  height : 35px;
+  display : none;
+}
+#window.hover a {
+  display : inline-block;
+  line-height : 35px;
+}
+/* ------------------------------------ */
+/* footer */
+/* ------------------------------------ */
+#footer {
+  width : 100%;
+  background : #5c5c5c;
+  color : #fff;
+  padding : 65px 0 45px;
+}
+.footer_inner {
+  width : 690px;
+  margin : 0 auto;
+}
+#footer .logo {
+  position : relative;
+}
+.f_logo span {
+  color : #fff;
+  vertical-align : bottom;
+}
+#footer .logo::after {
+  content : '';
+  width : 80px;
+  height : 1px;
+  transform : rotate(-90deg);
+  background : #fff;
+  position : absolute;
+  top : 50%;
+  left : 165px;
+}
+.footer_item:nth-last-of-type(2) p {
+  font-family : azo-sans-web, sans-serif;
+}
+#footer span {
+  display : block;
+}
+.address span {
+  padding-bottom : 16px;
+}
+#footer .content_wrapper {
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+}
+#footer .content_wrapper:nth-of-type(1) {
+  padding-left : 45px;
+  padding-right : 45px;
+  margin-bottom : 65px;
+}
+#footer .content_wrapper:nth-of-type(2) {
+  align-items : inherit;
+}
+#footer h6 {
+  position : relative;
+  font-size : 18px;
+  font-family : azo-sans-web, sans-serif;
+  font-weight : bold;
+  padding-bottom : 7px;
+  margin-bottom : 25px;
+}
+#footer h6::after {
+  content : '';
+  width : 87px;
+  height : 2px;
+  background : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+}
+.copyright {
+  text-align : center;
+  font-family : azo-sans-web, sans-serif;
+  font-size : 10px;
+  padding-top : 80px;
+}
+/* ------------------------------------ */
+/* stalker js animetion */
+/* ------------------------------------ */
+#stalker {
+  pointer-events : none;
+  position : fixed;
+  border-radius : 50%;
+  -webkit-transition : top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
+          transition : top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
+          transition : transform .2s, top, .5s, left .5s, width .5s, height .5s, background-color .5s;
+          transition : transform .2s, top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
+  -webkit-transition-timing-function : ease-out;
+          transition-timing-function : ease-out;
+  z-index : 999;
+}
+#stalker.hov_ {
+  top : -32px;
+  left : -32px;
+  width : 64px;
+  height : 64px;
+  -webkit-transition : .5s;
+          transition : .5s;
+  background : rgba(255, 255, 255, .5);
+}

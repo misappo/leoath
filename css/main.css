@@ -1,0 +1,329 @@
+@charset 'utf-8';
+/* -----------------------------------------------------------
+CSS Information
+
+File name:      mian.css
+Created:        2020-07
+Style Info:     メインCSS
+----------------------------------------------------------- */
+
+/* ------------------------------------ */
+/* mainvisual */
+/* ------------------------------------ */
+#main {
+  height : 790px;
+  background : transparent url(../img/beach-2x.jpg) no-repeat bottom/cover;
+}
+.header_heading {
+  padding-top : 297px;
+  width : 500px;
+}
+.subheading {
+  font-size : 25px;
+  font-weight : bold;
+  line-height : 2.5;
+}
+/* ------------------------------------ */
+/* about us */
+/* ------------------------------------ */
+/*.heading_text {
+  position : relative;
+}*/
+/*.one .bg_text {
+  font-size : 120px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+  color : #f8f8f8;
+  border : #f8f8f8;
+}*/
+.heading {
+  text-align : center;
+  font-family : azo-sans-web, sans-serif;
+  font-size : 45px;
+  font-weight : bold;
+  line-height : 1.2;
+}
+.heading::before {
+  content : 'About Us';
+  position : absolute;
+  top : 0;
+  left : 0;
+  transform : translateY(-50%);
+  font-size : 120px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+  color : #f8f8f8;
+  border : #f8f8f8;
+  z-index : -1;
+}  
+/*.heading {
+  position : absolute;
+  left : 50%;
+  transform : translateX(-50%);
+  font-family : azo-sans-web, sans-serif;
+  font-size : 45px;
+  font-weight : bold;
+  line-height : 1.2;
+  top : 100px;
+}*/
+#about_us .content_wrapper img {
+  padding-bottom : 50px;
+}
+#about_us,#event,#servise,#news {
+  padding : 55px 0;
+}
+#about_us {
+  position : relative;
+  padding-top : 90px;
+}  
+.sub_text {
+  display : inline-block;
+  width : 100%;
+  text-align : center;
+  font-weight : normal;
+  line-height : 1;
+  margin-bottom : 43px;
+}
+#about_us .content_wrapper .bg,#event .content_wrapper .bg {
+  width : 907px;
+  height : 340px;
+  right : 0;
+  top : 43px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+#about_us .content_text {
+  top : 117px;
+}
+#about_us .content_text,#event .content_text {
+  width : 477px;
+  height : 440px;
+  position : absolute;
+  transform : translateX(670px);
+  background : #fff;
+  box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
+  padding : 75px 86px 100px;
+}
+h4 {
+  font-size : 25px;
+  font-weight : bold;
+  line-height : 1.6;
+  letter-spacing : 1;
+  margin-bottom : 68px;
+}
+.marker_thin {
+  background : linear-gradient(transparent 70%,rgba(0,147,255,.5) 0);
+}
+.color_1 {
+  font-size : 20px;
+  color : #3162e6;
+  line-height : 0;
+}
+/* ------------------------------------ */
+/* servise */
+/* ------------------------------------ */
+#servise {
+  position : relative;
+}
+#servise .content_wrapper {
+  display : flex;
+}
+.swiper-container {
+  box-sizing : content-box;
+}
+.swiper-slide {
+  background-position : center;
+  background-repeat : no-repeat;
+}
+.slide1 {
+  background-image : url(../img/casting.jpg);
+}
+.slide2 {
+  background-image : url(../img/beauty_products.jpg);
+}
+.slide3 {
+  background-image : url(../img/web_production.jpg);
+}
+.slide4 {
+  background-image : url(../img/web_advertisement.jpg);
+}  
+.swiper-slide .s-heading {
+  font-family : azo-sans-web, sans-serif;
+  font-weight : bold;
+  font-size : 16px;
+  line-height : 1;
+}
+.swiper-slide .s-heading,.swiper-slide .caption {
+  opacity : 0;
+  padding-top : 340px; /* ★ページネーション・スクロールバー分の余白50pxを下に取る */
+  color : #fff;
+}
+.swiper-slide-active .s-heading,.swiper-slide-active .caption {
+  opacity : 1;
+  transition : ease-in 1s;
+}
+.swiper_bg {
+  background : #2e75b6;
+  padding-top : 20px;
+  padding-bottom : 110px;
+  width : 760px;
+  height : 310px;
+}
+#servise .content_text {
+  width : 480px;
+  padding : 55px 85px 0;
+}
+.view_more {
+  display : inline-block;
+  -webkit-box-flex : 1;
+  flex : 1 1 auto;
+  padding : 10px 20px;
+  margin-top : 60px;
+  border : 1px solid #000;
+  text-align : center;
+  text-transform : uppercase;
+  position : relative;
+  overflow : hidden;
+  -webkit-transition : 1s;
+          transition : 1s;
+  border-radius : 30px;
+  background-color : rgba(0, 0, 0, 0);
+  z-index : 1;
+  font-size : 14px;
+  font-family : azo-sans-web, sans-serif;
+  line-height : 1.2;
+}
+.view_more::after {
+  position : absolute;
+  -webkit-transition : 1s;
+          transition : 1s;
+  content : '';
+  width : 0;
+  left : 50%;
+  bottom : -5px;
+  height : 3px;
+  background : #000;
+  height : 120%;
+  left : -10%;
+  -webkit-transform : skewX(15deg);
+          transform : skewX(15deg);
+  z-index : -1;
+}
+.view_more:hover {
+  cursor : pointer;
+  color : white;
+}
+.view_more:hover:after {
+  left : -10%;
+  width : 120%;
+}
+.s_btn {
+  position : absolute;
+  bottom : 60px;
+  right : 5%;
+  display : flex;
+  justify-content : space-between;
+  width : 100px;
+}
+.btn-prev,.btn-next {
+  cursor : pointer;
+  background : no-repeat;
+  width : 39px;
+  height : 39px;
+  z-index : 1;
+}
+.btn-prev {
+  background : url(../img/btn-prev.png);
+  left : 10px ;
+  right : auto;
+}
+.btn-next {
+  background : url(../img/btn-next.png);
+  right : 10px;
+  left : auto;
+}  
+.swiper-container-horizontal > .swiper-scrollbar {
+  width : 80px;
+  height : 4px;
+  left : 48%;
+  margin-bottom : 30px;
+}
+/*.swiper-scrollbar {
+  background : rgba(0,147,255,.3);  背景色（現在のスライド)
+}*/
+.swiper-scrollbar-drag {
+  background : #fff; /* 背景色（現在のスライド以外） */
+}
+/* ------------------------------------ */
+/* event */
+/* ------------------------------------ */
+#event .content_text {
+  top : 185px;
+}
+#event .content_wrapper img {
+  padding-bottom : 86px;
+}
+/* ------------------------------------ */
+/* solution */
+/* ------------------------------------ */
+#solution {
+  width : 100%;
+  background : linear-gradient(#fff 70%, #2e75b6 20%);
+  padding : 55px 0 65px;
+  margin-bottom : 55px;
+}
+#solution .content_wrapper {
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+}
+.solution_item {
+  width : 290px;
+  box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
+  border-radius : 33px;
+  background : #fff;
+  text-align : center;
+  padding : 22px 60px 35px;
+}
+.solution_item img {
+  margin-bottom : 7px;
+}
+.solution_item p {
+  font-size : 14px;
+}
+#solution .item_text {
+  display : block;
+  font-size : 14px;
+  line-height : 1.2;
+  font-family : azo-sans-web, sans-serif;
+}
+#solution h5 {
+  font-size : 18px;
+  font-weight : bold;
+  margin-bottom : 25px;
+}
+#solution .inner:nth-of-type(2) {
+  padding-left : 60px;
+  padding-right : 60px;
+}
+.heading {
+  top : 0;
+  z-index : 1;
+  position : static;
+  transform : translateX(0);
+  text-align : center;
+}
+.content_wrapper::after {
+  content : '';
+  width : 907px;
+  height : 340px;
+  right : 0;
+  top : 43px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+
