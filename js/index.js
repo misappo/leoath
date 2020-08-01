@@ -2,12 +2,12 @@ $('.fade-in').on('inview', function(event, isInView) {
     $(this).addClass('inview-in');
 });
 
-$('.btn-prev').on('click', function () {
+$('.btn_prev').on('click', function () {
     $('.swiper-button-prev').click()
     return false;
 });
 
-$('.btn-next').on('click', function () {
+$('.btn_next').on('click', function () {
     $('.swiper-button-next').click()
     return false;
 });
