@@ -26,6 +26,9 @@ h4 {
   width : 1238px;
   margin : 0 auto;
 }
+.fade-in .inner {
+  position : relative;
+}
 .content_wrapper,.h_container {
   position : relative;
 }

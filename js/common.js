@@ -3,6 +3,10 @@ $("#hover").hover(function () {
     $("#window").toggleClass("hover");
 });
 
+$('.fade-in-stairs').on('inview', function(event, isInView) {
+    $(this).addClass('inview-in');
+});
+
 //マウスストーカー用のdivを取得
 const stalker = document.getElementById('stalker');
 
