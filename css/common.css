@@ -8,57 +8,29 @@ Style Info:     共有CSS
 ----------------------------------------------------------- */
 
 /* ------------------------------------ */
-/* Reset */
+/* heading */
 /* ------------------------------------ */
-*,*::before,*::after {
-  box-sizing : border-box;
+h4 {
+  font-size : 25px;
+  font-weight : bold;
+  line-height : 1.6;
 }
-html,body {
-  margin : 0;
-  padding : 0;
-}  
-body {
-  color : #000;
-  font-family : '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
-  font-size : 16px;
+/*.content_text p,#solution h5,.solution_item p,.h_heading,.heading_l,.heading_r,#footer h6,#footer p,.address,#footer span,.s_heading,#point .txt,#schedule,#d_contact,#register_info .r_text,.step span,.swiper-slide .s_heading,.swiper-slide .caption,.r_list li {
   line-height : 1.3;
-  letter-spacing : 0;
-  background : #fff;
-  -moz-osx-font-smoothing : grayscale;
-  -webkit-font-smoothing : antialiased;
-}
-img {
-  border : 0;
-  height : auto;
-  max-width : 100%;
-  vertical-align : top;
-}
-h1,h2,h3,h4,h5,h6,p,ul,li,img {
-  margin : 0;
-  padding : 0;
-}
-li {
-  list-style : none;
-}
-a {
-  color : #000;
-  text-decoration : none;
-}
+}*/
 /* ------------------------------------ */
 /* layout */
 /* ------------------------------------ */
 .inner {
-  max-width : 1238px;
+  max-width : 100%;
+  width : 1238px;
   margin : 0 auto;
 }
-.content_wrapper {
+.content_wrapper,.h_container {
   position : relative;
 }
 .fa,.fas {
   font-weight : 900;
-}
-.fa,.far,.fas {
-  font-family : 'Font Awesome 5 Free';
 }
 /* ------------------------------------ */
 /* header */
@@ -100,6 +72,9 @@ a {
 }
 .fa-angle-down {
   margin-left : 10px;
+}
+.fa,.far,.fas {
+  font-family : 'Font Awesome 5 Free';
 }
 .menu_item:not(:last-child) {
   padding-right : 50px;
@@ -163,6 +138,7 @@ a {
 /* footer */
 /* ------------------------------------ */
 #footer {
+  position : relative;
   width : 100%;
   background : #5c5c5c;
   color : #fff;
@@ -196,7 +172,10 @@ a {
   display : block;
 }
 .address span {
-  padding-bottom : 16px;
+  margin-bottom : 16px;
+}
+.footer_item p {
+  line-height : 1.8;
 }
 #footer .content_wrapper {
   display : flex;
