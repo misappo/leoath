@@ -53,7 +53,7 @@
     <!-- End header -->
     <!-- mainvisual -->
     <section id="main">
-        <div id="particles-js" class="heading_inner">
+        <div class="heading_inner">
             <h1 class="main_heading"><img src="./img/heading-2x.png" alt="海辺の画像"></h1>
             <h2 class="subheading">若さとアイデアで新時代に革命を起こす。</h2>
         </div>
@@ -212,64 +212,11 @@
     <!-- stalker js -->
     <div id="stalker" class="" style="transform: translate(704px, 418px);"></div>
     <!-- End stalker js -->
-    <script>
-        //swiper js
-        var mySwiper = new Swiper('.swiper-container', {
-            autoplay: {
-                delay: 3000,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: false,
-                draggable: true,
-                dragSize: 500,
-            },
-            effect: 'coverflow',
-            slidesPerView: 2,
-            centeredSlides: true,
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                slideShadows: false,
-                stretch: 0,
-                modifier: 5,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        })
-    </script>
-    <script>
-        //nav hover animation
-        $("#hover").hover(function () {
-            $("#window").toggleClass("hover");
-
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="./lib/particles.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
-    <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', './lib/particles.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
-    </script>
-    <script>
-        $('.btn-prev').on('click', function () {
-            $('.swiper-button-prev').click()
-            return false;
-        });
-
-        $('.btn-next').on('click', function () {
-            $('.swiper-button-next').click()
-            return false;
-        });
-    </script>
 </body>
 
 </html>

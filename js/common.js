@@ -1,3 +1,8 @@
+//nav hover animation
+$("#hover").hover(function () {
+    $("#window").toggleClass("hover");
+});
+
 //マウスストーカー用のdivを取得
 const stalker = document.getElementById('stalker');
 

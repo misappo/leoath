@@ -309,45 +309,7 @@
     <!-- stalker js -->
     <div id="stalker" class="" style="transform: translate(704px, 418px);"></div>
     <!-- End stalker js -->
-    <script>
-        //swiper js
-        var mySwiper = new Swiper('.swiper-container', {
-            autoplay: {
-                delay: 3000,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: false,
-                draggable: true,
-                dragSize: 500,
-            },
-            effect: 'coverflow',
-            slidesPerView: 2,
-            centeredSlides: true,
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                slideShadows: false,
-                stretch: 0,
-                modifier: 5,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        })
-    </script>
-    <script>
-        //nav hover animation
-        $("#hover").hover(function () {
-            $("#window").toggleClass("hover");
-
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/common.js"></script>
 </body>
 
