@@ -932,6 +932,28 @@ Style Info:     メインCSS
   top : 60px;
   right : 0;
 }
+.img_wrapper {
+  opacity : 0;
+  position : relative;
+  width : 690px;
+}
+.img_wrapper img {
+  width : 100%;
+}
+.color img {
+  position : relative;
+  z-index : 1;
+  -moz-transition-delay : 1;
+  animation : img 1s ease-in-out;
+}
+.color .filter {
+  position : absolute;
+  top : 0;
+  z-index : 2;
+  background-color : #fffbff;
+  height : 100%;
+  animation : filter 1s ease-in-out;
+}
 /*.item2 .marker_line:first-child {
   width : 95%;
 }*/
