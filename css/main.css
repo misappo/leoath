@@ -1,4 +1,4 @@
-@charset 'utf-8';
+﻿@charset 'utf-8';
 /* -----------------------------------------------------------
 CSS Information
 
@@ -449,6 +449,9 @@ Style Info:     メインCSS
 .swiper-scrollbar-drag {
   background : #fff; /* 背景色（現在のスライド以外） */
 }
+.swiper-button-next, .swiper-button-prev {
+    display:none;
+}
 /* ------------------------------------ */
 /* event */
 /* ------------------------------------ */
@@ -456,7 +459,7 @@ Style Info:     メインCSS
   content : 'Event';
 }  
 #event .content_text {
-  top : 185px;
+    top: 185px;
 }
 #event .content_wrapper img {
   padding-bottom : 86px;

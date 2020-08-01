@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://use.typekit.net/llr0eoa.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <title>LEOATH</title>
@@ -55,7 +53,7 @@
     <!-- End header -->
     <!-- mainvisual -->
     <section id="main">
-        <div class="heading_inner">
+        <div id="particles-js" class="heading_inner">
             <h1 class="main_heading"><img src="./img/heading-2x.png" alt="海辺の画像"></h1>
             <h2 class="subheading">若さとアイデアで新時代に革命を起こす。</h2>
         </div>
@@ -255,6 +253,23 @@
     </script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', './lib/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+    <script>
+        $('.btn-prev').on('click', function () {
+            $('.swiper-button-prev').click()
+            return false;
+        });
+
+        $('.btn-next').on('click', function () {
+            $('.swiper-button-next').click()
+            return false;
+        });
+    </script>
 </body>
 
 </html>
