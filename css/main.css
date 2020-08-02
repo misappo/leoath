@@ -559,11 +559,11 @@ Style Info:     メインCSS
 }
 #casting .content_text,#web_production .content_text {
   transform : translateX(570px);
-  left: 570px;
+  left : 570px;
 }
 #web_ad .content_text,#beauty .content_text {
   transform : translateX(200px);
-  left: 200px;
+  left : 200px;
 }
 #casting .content_text,#web_ad .content_text,#web_production .content_text,#web_production .content_text,#beauty .content_text {
   display : table;
