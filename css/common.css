@@ -1,4 +1,4 @@
-@charset 'utf-8';
+﻿@charset 'utf-8';
 /* -----------------------------------------------------------
 CSS Information
 
@@ -26,7 +26,7 @@ h4 {
   width : 1238px;
   margin : 0 auto;
 }
-.fade-in .inner {
+.animate .inner {
   position : relative;
 }
 .content_wrapper,.h_container {
