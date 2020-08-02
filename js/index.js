@@ -40,7 +40,7 @@ var mySwiper = new Swiper('.swiper-container', {
 })
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('main', './lib/particles.json', function () {
+particlesJS.load('body', './lib/particles.json', function () {
     //console.log('callback - particles.js config loaded');
 });
  /* =============== ローディングアニメーション =============== */
