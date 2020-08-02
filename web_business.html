@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -286,21 +286,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./lib/jquery.inview.min.js"></script>
     <script src="./js/common.js"></script>
-    <script>
-         $(window).scroll(function() {
-        let height = $("#web_business").outerHeight(true) / 3;
-        var scroll = $(window).scrollTop();
-        if (height <= scroll) {
-            $('.img_wrapper').addClass('color');
-            $('.img_wrapper').css('opacity', 1);
-        }
-        height = $("#web_business").outerHeight(true) + $("#support").outerHeight(true) + $("#w_point").outerHeight(true) / 8;
-        if (height <= scroll) {
-            $('.img_wrapper').addClass('color');
-            $('.img_wrapper').css('opacity', 1);
-        }
-    });
-    </script>
+    <script src="./js/web_business.js"></script>
 </body>
 
 </html>

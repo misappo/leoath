@@ -559,9 +559,11 @@ Style Info:     メインCSS
 }
 #casting .content_text,#web_production .content_text {
   transform : translateX(570px);
+  left: 570px;
 }
 #web_ad .content_text,#beauty .content_text {
   transform : translateX(200px);
+  left: 200px;
 }
 #casting .content_text,#web_ad .content_text,#web_production .content_text,#web_production .content_text,#beauty .content_text {
   display : table;
@@ -1451,12 +1453,6 @@ label {
   }
 }
 
-.inview-in img,.inview-in .bg1 {
-  /*animation-delay : .2s;*/
-}
-.inview-in .content_text {
-  animation-delay : .8s;
-}
 .slideIn-left {
   opacity : 0;
 }
@@ -1553,38 +1549,35 @@ label {
   animation-delay : 2s;
 }
 
-delay-02 {
+.delay-02 {
   animation-delay : .2s;
 }
-delay-04 {
+.delay-04 {
   animation-delay : .4s;
 }
-delay-06 {
+.delay-06 {
   animation-delay : .6s;
 }
-delay-08 {
+.delay-08 {
   animation-delay : .8s;
 }
-delay-10 {
+.delay-10 {
   animation-delay : 1s;
 }
-delay-12 {
+.delay-12 {
   animation-delay : 1.2s;
 }
-delay-14 {
+.delay-14 {
   animation-delay : 1.4s;
 }
-delay-16 {
+.delay-16 {
   animation-delay : 1.6s;
 }
-delay-18 {
+.delay-18 {
   animation-delay : 1.8s;
 }
-delay-20 {
+.delay-20 {
   animation-delay : 2s;
-}
-.fade-in-stairs .arrow {
-  z-index : 9999;
 }
 .txtcol {
   opacity : 0;
