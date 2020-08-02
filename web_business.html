@@ -73,17 +73,17 @@
     <section id="w_ad">
         <div class="inner">
             <h3 class="heading_r">Web広告事業</h3>
-            <div class="item item2">
-                <div class="img_wrapper color">
+            <div class="item item2 animate">
+                <div class="img_wrapper">
                     <img src="./img/w_ad.jpg" alt="デスク上で複数人が拳と拳を合わせる">
                     <div class="filter"></div>
                 </div>
-                <div class="txtcol">
+                <div class="txtcol animate">
                     <h3>
                         <span class="marker_line">クライアントにあったWebマーケティング</span>
                         <span class="marker_line">を最優先に考える。</span>
                     </h3>
-                    <p class="txt">
+                    <p class="txt fade-in">
                         様々なWebマーケティングの手法がある中でサービス内容や市場によって、合うものと合わないものがあります。やみくもにWeb施策を実行するだけでは、リソースが無駄になるばかりです。弊社ではクライアントのサービス・市場での立ち位置から最適なWeb広告のご提案をします。
                     </p>
                 </div>
@@ -172,8 +172,8 @@
     <section id="w_production">
         <div class="inner">
             <h3 class="heading_r">Web制作事業</h3>
-            <div class="item item2">
-                <div class="img_wrapper color">
+            <div class="item item2 animate">
+                <div class="img_wrapper">
                     <img src="./img/w_production.jpg" alt="パソコンモニターを線状の虹彩色の物体が通り抜けている">
                     <div class="filter"></div>
                 </div>
@@ -182,7 +182,7 @@
                         <span class="marker_line">私たちのクリエイティビティで</span>
                         <span class="marker_line">Web上のクライアントと顧客を繋ぐ。</span>
                     </h3>
-                    <p class="txt">
+                    <p class="txt fade-in">
                         Web制作において欠かせないクライアントのビジネスやサービスについて理解をすることをディレクター含めデザイナーも一体となり行うことで
                         クライアントのニーズに最も近い表現を実現します。
                     </p>
@@ -194,10 +194,10 @@
     <!-- End w production -->
     <!-- w schedule -->
     <section id="w_schedule">
-        <div class="inner">
+        <div class="inner animate">
             <h3 class="heading_l">Schedule</h3>
             <span class="sub_text sub_l">納品までの流れ</span>
-            <ol class="sec_box">
+            <ol class="sec_box fade-in-stairs">
                 <li class="num_item">
                     <span class="b_txt">1</span>
                     <span><img src="./img/icon8.png" alt="ポイント1のアイコン"></span>
@@ -281,10 +281,26 @@
     </section>
     <!-- End footer -->
     <!-- stalker js -->
-    <div id="stalker" class="" style="transform: translate(704px, 418px);"></div>
+    <div id="stalker"></div>
     <!-- End stalker js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./lib/jquery.inview.min.js"></script>
     <script src="./js/common.js"></script>
+    <script>
+         $(window).scroll(function() {
+        let height = $("#web_business").outerHeight(true) / 3;
+        var scroll = $(window).scrollTop();
+        if (height <= scroll) {
+            $('.img_wrapper').addClass('color');
+            $('.img_wrapper').css('opacity', 1);
+        }
+        height = $("#web_business").outerHeight(true) + $("#support").outerHeight(true) + $("#w_point").outerHeight(true) / 8;
+        if (height <= scroll) {
+            $('.img_wrapper').addClass('color');
+            $('.img_wrapper').css('opacity', 1);
+        }
+    });
+    </script>
 </body>
 
 </html>
