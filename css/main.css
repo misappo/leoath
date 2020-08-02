@@ -315,7 +315,7 @@ Style Info:     メインCSS
   box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
   padding : 75px 86px 50px;
 }
-#about_us .inview-in .content_text, #event .content_text {
+#about_us .inview-in .content_text, #event .inview-in .content_text {
     left: 670px;
 }
 #about_us .color_1 {
@@ -565,10 +565,10 @@ Style Info:     メインCSS
 #web_ad .content_text,#beauty .content_text {
   transform : translateX(200px);
 }
-#casting .inview-in .content_text,#web_production .content_text {
+#casting .inview-in .content_text,#web_production  .inview-in .content_text {
   left : 570px;
 }
-#web_ad  .inview-in .content_text,#beauty .content_text {
+#web_ad  .inview-in .content_text,#beauty  .inview-in .content_text {
   left : 200px;
 }
 #casting .content_text,#web_ad .content_text,#web_production .content_text,#web_production .content_text,#beauty .content_text {
