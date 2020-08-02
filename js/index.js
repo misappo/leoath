@@ -1,7 +1,3 @@
-$('.fade-in').on('inview', function(event, isInView) {
-    $(this).addClass('inview-in');
-});
-
 $('.btn_prev').on('click', function () {
     $('.swiper-button-prev').click()
     return false;
