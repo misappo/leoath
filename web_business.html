@@ -34,11 +34,13 @@
     <section id="header" class="fadein_slow">
         <div class="nav">
             <div class="inner header_inner">
-                <p class="logo"><a href="./index.html" class="no_stick_"><img src="./img/logo.svg" alt="ロゴ"><span>LEOATH</span></a>
+                <p class="logo"><a href="./index.html" class="no_stick_"><img src="./img/logo.svg"
+                            alt="ロゴ"><span>LEOATH</span></a>
                 </p>
                 <ul class="contents_menu">
                     <li class="menu_item"><a href="./index.html">Top</a></li>
-                    <li class="menu_item" id="hover"><a href="./service.html">Service<i class="fas fa-angle-down"></i></a>
+                    <li class="menu_item" id="hover"><a href="./service.html">Service<i
+                                class="fas fa-angle-down"></i></a>
                         <div id="window">
                             <a href="./casting.html">Casting</a>
                             <a href="./web_business.html">Web business</a>
@@ -61,7 +63,8 @@
                     <h2 class="h_heading">Web Business</h2>
                     <span class="h_sub_text">Web広告事業 &#047; Web制作事業</span>
                     <h4 class="h_text"><span class="marker_thin">デジタルマーケティングの<br>最適化の実現。</span></h4>
-                    <p class="info_txt">Web広告がテレビCMを抜きNo.1メディアになり今後5Gの導入により更にデジタルシフトが進んでいく現代においてクライアントの商品・サービスに最適なWeb広告の運用またはホームページ・ランディングページ・映像制作をご提案します。
+                    <p class="info_txt">
+                        Web広告がテレビCMを抜きNo.1メディアになり今後5Gの導入により更にデジタルシフトが進んでいく現代においてクライアントの商品・サービスに最適なWeb広告の運用またはホームページ・ランディングページ・映像制作をご提案します。
                     </p>
                 </div>
                 <img src="./img/web_business.jpg" alt="デスクとパソコン">
@@ -97,7 +100,8 @@
         <div class="bg3"></div>
         <div class="inner">
             <div class="content_wrapper">
-                <h3 class="heading_u">コンサルティングと広告運用を通して<br>Web施策の<span class="marker_thin large">&ldquo;インハウス化&rdquo;</span>のサポート
+                <h3 class="heading_u">コンサルティングと広告運用を通して<br>Web施策の<span
+                        class="marker_thin large">&ldquo;インハウス化&rdquo;</span>のサポート
                 </h3>
                 <div class="content_text">
                     <p>中長期間のWebコンサルティング・広告運用を一貫して弊社で行うことによりWeb広告の最適化を図ります。コンサルティングでは運用担当者の勉強会を実施することにより最終的にデジタル広告の”インハウス化”が実現できるようサポートします。
@@ -207,8 +211,8 @@
                         <dd class="txt">新規のサイト制作はもちろん既存のサイトのリニューアルにおいてクライアントのビジネス・サービス、現状のお悩みをヒアリングしニーズに最も近い表現をご提案します。
                         </dd>
                     </dl>
-                    <span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span>
                 </li>
+                <li class="arrow_icon"><span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span></li>
                 <li class="num_item">
                     <span class="b_txt">2</span>
                     <span><img src="./img/icon9.png" alt="ポイント1のアイコン"></span>
@@ -218,8 +222,8 @@
                         <dd class="txt">ヒアリングの内容をもとにデザイナーが適切に情報が整理され、自信が求める情報へとスムーズに導いてくれるデザインをご提案します。
                         </dd>
                     </dl>
-                    <span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span>
                 </li>
+                <li class="arrow_icon"><span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span></li>
                 <li class="num_item">
                     <span class="b_txt">3</span>
                     <span><img src="./img/icon10.png" alt="ポイント1のアイコン"></span>
@@ -229,8 +233,8 @@
                         <dd class="txt">作成したデザインをもとにSEOを意識したプログラミング作業を行なっていきます。
                         </dd>
                     </dl>
-                    <span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span>
                 </li>
+                <li class="arrow_icon"><span class="arrow"><img src="./img/arrow.png" alt="ポイント1のアイコン"></span></li>
                 <li class="num_item">
                     <span class="b_txt">4</span>
                     <span><img src="./img/icon11.png" alt="ポイント1のアイコン"></span>
@@ -287,19 +291,19 @@
     <script src="./lib/jquery.inview.min.js"></script>
     <script src="./js/common.js"></script>
     <script>
-         $(window).scroll(function() {
-        let height = $("#web_business").outerHeight(true) / 3;
-        var scroll = $(window).scrollTop();
-        if (height <= scroll) {
-            $('.img_wrapper').addClass('color');
-            $('.img_wrapper').css('opacity', 1);
-        }
-        height = $("#web_business").outerHeight(true) + $("#support").outerHeight(true) + $("#w_point").outerHeight(true) / 8;
-        if (height <= scroll) {
-            $('.img_wrapper').addClass('color');
-            $('.img_wrapper').css('opacity', 1);
-        }
-    });
+        $(window).scroll(function () {
+            let height = $("#web_business").outerHeight(true) / 3;
+            var scroll = $(window).scrollTop();
+            if (height <= scroll) {
+                $('.img_wrapper').addClass('color');
+                $('.img_wrapper').css('opacity', 1);
+            }
+            height = $("#web_business").outerHeight(true) + $("#support").outerHeight(true) + $("#w_point").outerHeight(true) / 8;
+            if (height <= scroll) {
+                $('.img_wrapper').addClass('color');
+                $('.img_wrapper').css('opacity', 1);
+            }
+        });
     </script>
 </body>
 

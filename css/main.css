@@ -677,6 +677,7 @@ Style Info:     メインCSS
 .sec_box {
   display : flex;
   justify-content : space-between;
+  position : relative;
 }
 .sec_box li {
   position : relative;
@@ -1192,12 +1193,12 @@ Style Info:     メインCSS
   content : 'Schedule';
 }
 /*icon*/
-.arrow {
+/*.arrow {
   position : absolute;
   top : 50%;
   right : -13%;
   z-index : 1;
-}
+}*/
 /*list*/
 #w_schedule .sec_box span {
   display : block;
@@ -1524,18 +1525,33 @@ label {
 }
 .inview-in .fade-in-stairs > *:nth-child(2) {
   animation-delay : .2s;
+  width : 48px;
+  position : absolute;
+  left : 280px;
+  top : 50%;
+  z-index : 2;
 }
 .inview-in .fade-in-stairs > *:nth-child(3) {
   animation-delay : .4s;
 }
 .inview-in .fade-in-stairs > *:nth-child(4) {
   animation-delay : .6s;
+  width : 48px;
+  position : absolute;
+  left : 597px;
+  top : 50%;
+  z-index : 2;
 }
 .inview-in .fade-in-stairs > *:nth-child(5) {
   animation-delay : .8s;
 }
 .inview-in .fade-in-stairs > *:nth-child(6) {
   animation-delay : 1s;
+  width : 48px;
+  position : absolute;
+  left : 910px;
+  top : 50%;
+  z-index : 2;
 }
 .inview-in .fade-in-stairs > *:nth-child(7) {
   animation-delay : 1.2s;
