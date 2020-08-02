@@ -60,6 +60,9 @@ Style Info:     メインCSS
   line-height : 1;
   margin-bottom : 43px;
 }
+.sub_l {
+  font-size : 20px;
+}
 /* ------------------------------------ */
 /* marker */
 /* ------------------------------------ */
@@ -252,10 +255,6 @@ Style Info:     メインCSS
   margin : 0 8px;
 }
 /* ------------------------------------ */
-/* layout background */
-/* ------------------------------------ */
-
-/* ------------------------------------ */
 /* about_us,event,service */
 /* ------------------------------------ */
 /*.heading_text {
@@ -373,7 +372,7 @@ Style Info:     メインCSS
 }
 #service .content_text {
   width : 480px;
-  padding : 55px 85px 0;
+  padding : 55px 75px 0;
 }
 /*button*/
 .s_btn {
@@ -417,9 +416,7 @@ Style Info:     メインCSS
 .swiper-button-next,.swiper-button-prev {
   display : none;
 }
-/* ------------------------------------ */
 /* event */
-/* ------------------------------------ */
 #event .heading_l::before {
   content : 'Event';
 }  
@@ -439,9 +436,7 @@ Style Info:     メインCSS
 #event h4 {
   text-align : center;
 }
-/* ------------------------------------ */
 /* solution */
-/* ------------------------------------ */
 #solution .heading_l::before {
   content : 'Solution';
 }  
@@ -705,6 +700,7 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* register_info */
 /* ------------------------------------ */
+/*list*/
 .r_list {
   width : 646px;
   height : 380px;
@@ -734,9 +730,20 @@ Style Info:     メインCSS
 .r_list li:nth-last-child(1) {
   padding-bottom : 40px;
 }
+.r_list span {
+  text-align : right;
+  display : block;
+}
+/*layout*/
 #register_info {
   background : linear-gradient(to right, #fff 40%, #b4dfff 63%, #85b1de 77%, #699bc6 88%, #5381af);
 }
+#register_info .content_wrapper {
+  padding : 50px 0 60px;
+  display : flex;
+  justify-content : space-between;
+}
+/*text*/
 #register_info .r_text {
   padding-top : 60px;
   font-size : 30px;
@@ -744,24 +751,24 @@ Style Info:     メインCSS
 #register_info p {
   line-height : 2;
 }
-#register_info .content_wrapper {
-  padding : 50px 0 60px;
-  display : flex;
-  justify-content : space-between;
-}
-.r_list span {
-  text-align : right;
-  display : block;
-}
 /* ------------------------------------ */
 /* schedule */
 /* ------------------------------------ */
-#schedule .inner {
-  padding-left : 130px;
-}
+/*heading*/
 #schedule .heading_r::before {
   content : 'Schedule';
 }
+/*layout*/
+#schedule .inner {
+  padding-left : 130px;
+}
+#schedule .content_wrapper {
+  display : flex;
+  align-items : stretch;
+  padding : 60px 0 55px;
+  margin-bottom : 30px;
+}
+/*list*/
 #schedule .step {
   display : flex;
   flex-direction : column;
@@ -785,12 +792,6 @@ Style Info:     メインCSS
   width : 340px;
   height : auto;
   margin-right : 70px;
-}
-#schedule .content_wrapper {
-  display : flex;
-  align-items : stretch;
-  padding : 60px 0 55px;
-  margin-bottom : 30px;
 }
 #schedule .content_wrapper .desc {
   margin-bottom : 20px;
@@ -830,10 +831,12 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* d_contact */
 /* ------------------------------------ */
+/*layout*/
 #d_contact .inner {
   padding-left : 35px;
   padding-right : 70px;
 }
+/*marker*/
 .marker_line:not(:last-child) {
   margin-bottom : 5px;
 }
@@ -912,6 +915,7 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* w_ad */
 /* ------------------------------------ */
+/*heading*/
 #w_ad .heading_r,#w_production .heading_r {
   font-family : azo-sans-web, sans-serif;
   font-size : 35px;
@@ -920,15 +924,9 @@ Style Info:     メインCSS
 #w_ad .heading_r::before {
   content : 'Web Ad';
 }
+/*layout*/
 #w_ad {
   padding : 125px 0 90px;
-}
-/*#w_ad .item2 {
-  padding-right : 200px;
-}*/
-.item2 .txt {
-  padding : 65px 25px 0 210px;
-  line-height : 2;
 }
 .item2 .txtcol {
   position : absolute;
@@ -941,14 +939,23 @@ Style Info:     メインCSS
   position : relative;
   width : 690px;
 }
-.img_wrapper img {
-  width : 100%;
-}
 .color img {
   position : relative;
   z-index : 1;
   animation : img 1s ease-in-out;
 }
+/*#w_ad .item2 {
+  padding-right : 200px;
+}*/
+/*text*/
+.item2 .txt {
+  padding : 65px 25px 0 210px;
+  line-height : 2;
+}
+.img_wrapper img {
+  width : 100%;
+}
+/*filter*/
 .color .filter {
   position : absolute;
   top : 0;
@@ -963,11 +970,11 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* support */
 /* ------------------------------------ */
+/*layout*/
 #support {
   position : relative;
   padding : 40px 0 60px;
 }
-/*layout*/
 #support .content_wrapper {
   display : flex;
   align-items : center;
@@ -1058,6 +1065,7 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* w_point */
 /* ------------------------------------ */
+/*heading*/
 #w_point .heading_l {
   font-size : 45px;
   font-family : azo-sans-web, sans-serif;
@@ -1065,6 +1073,7 @@ Style Info:     メインCSS
 #w_point .heading_l::before {
   content : 'Point';
 }
+/*layout*/
 #w_point,#w_production,#w_schedule {
   padding : 125px 0 60px;
 }
@@ -1078,6 +1087,7 @@ Style Info:     メインCSS
   display : flex;
   justify-content : space-between;
 } 
+/*list*/
 .w_item {
   width : 390px;
   height : 360px;
@@ -1103,6 +1113,7 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* w_production */
 /* ------------------------------------ */
+/*heading*/
 #w_production .heading_r::before {
   content : 'Production';
 }
@@ -1112,18 +1123,18 @@ Style Info:     メインCSS
 /*#w_schedule .sub_text,#w_point .sub_text {
   font-size : 20px;
 }*/
-.sub_l {
-  font-size : 20px;
-}
+/*heading*/
 #w_schedule .heading_l::before {
   content : 'Schedule';
 }
+/*icon*/
 .arrow {
   position : absolute;
   top : 50%;
   right : -13%;
   z-index : 1;
 }
+/*list*/
 #w_schedule .sec_box span {
   display : block;
 }
@@ -1147,9 +1158,15 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* philosophy */
 /* ------------------------------------ */
+/*layout*/
 #philosophy {
   padding-top : 100px;
 }
+#philosophy .container {
+  padding-top : 60px;
+  margin-bottom : 60px;
+}
+/*heading*/
 #philosophy .heading_r,#company_info .heading_r,#contact .heading_r {
   font-size : 30px;
   margin-bottom : 70px;
@@ -1161,6 +1178,7 @@ Style Info:     メインCSS
   text-align : center;
   font-size : 30px;
 }
+/*text*/
 #philosophy p {
   font-size : 25px;
   padding : 50px 70px;
@@ -1168,19 +1186,18 @@ Style Info:     メインCSS
 #philosophy h4,#philosophy p {
   color : #fff;
 }
-#philosophy .container {
-  padding-top : 60px;
-  margin-bottom : 60px;
-}
 /* ------------------------------------ */
 /* company_info */
 /* ------------------------------------ */
+/*layout*/
 #company_info {
   padding : 100px 0 130px;
 }
+/*heading*/
 #company_info .heading_r::before {
   content : 'Company';
 }
+/*table layout*/
 .c_table {
   width : 100%;
   text-align : left;
@@ -1207,9 +1224,11 @@ Style Info:     メインCSS
 /* ------------------------------------ */
 /* contact */
 /* ------------------------------------ */
+/*heading*/
 #contact .heading_r::before {
   content : 'Contact';
 }
+/*layout*/
 #contact {
   padding : 60px 0 110px;
 }
@@ -1217,6 +1236,7 @@ Style Info:     メインCSS
   padding-left : 70px;
   padding-right : 70px;
 }
+/*button*/
 .submit_btn {
   -webkit-box-flex : 1;
   flex : 1 1 auto;
@@ -1234,6 +1254,7 @@ Style Info:     メインCSS
   background-color : #fff;
   z-index : 1;
 }
+/*form layout*/
 .input,textarea {
   border : 1px solid #707070;
   width : 100%;
@@ -1255,7 +1276,7 @@ textarea {
 label {
   font-size : 20px;
 }
-
+/*matsukichi design*/
 #about_us .content_wrapper img {
   padding-bottom : 50px;
 }
@@ -1501,18 +1522,19 @@ label {
   left : 0;
 }
 #progress .progress_loading img {
-  width : 410px;
   position : absolute;
   top : 50%;
   left : 50%;
+  width : 320px;
   -webkit-transform : translate(-50%, -50%);
      -moz-transform : translate(-50%, -50%);
       -ms-transform : translate(-50%, -50%);
-          transform : translate(-50%, -50%);
+          transform : translate(-75%, -50%);
 }
 .l_container {
   position : absolute;
-  width : 410px;
+  width : 500px;
+  height : 500px;
   top : 50%;
   left : 50%;
   -webkit-transform : translate(-50%, -50%);
@@ -1521,5 +1543,19 @@ label {
           transform : translate(-50%, -50%);
 }
 .l_container #demo-progress-2 {
-  transform : translateX(100%);
+  position : absolute;
+  left : 50%;
+  top : 50%;
+  right : 0;
+  transform : translate(45%, -50%);
+  padding-left : 25px;
+}
+.l_container #demo-progress-2::before {
+  content : '';
+  width : 55px;
+  height : 2px;
+  display : inline-block;
+  vertical-align : middle;
+  background : rgb(0, 0, 0);
+  margin : 0 8px;
 }

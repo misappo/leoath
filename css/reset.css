@@ -12,6 +12,9 @@ Style Info:     リセットCSS
 *,*::before,*::after {
     box-sizing : border-box;
   }
+  html {
+    scroll-padding-top : 76px; /* 固定ヘッダの高さ分 */
+  }  
   html,body {
     margin : 0;
     padding : 0;
