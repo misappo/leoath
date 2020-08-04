@@ -1,0 +1,231 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <!--<link rel="stylesheet" href="css/all.css">-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/llr0eoa.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./pace-master/themes/blue/pace-theme-minimal.css">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./pace-master/pace.min.js"></script>
+    <script src="./pace-master/docs/lib/color.js"></script>
+    <script src="./pace-master/docs/lib/themes.js"></script>
+    <script src="/pace/pace.js"></script>
+    <link href="./pace-master/docs/resources/flash-white.css" rel="stylesheet" />
+
+    <title>loading</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+
+<body>
+    <div class="section colored">
+        <div class="header">
+            <div class="title">
+                <h1 class="title1">
+                    <span class="char1"><img src="./img/loading_logo_b.png" alt=""></span>
+                    <!--<span class="char2">a</span>
+                    <span class="char3">c</span>
+                    <span class="char4">e</span>-->
+                </h1>
+                <h1 class="title2">
+                    <span class="char1"><img src="./img/loading_logo_w.png" alt=""></span>
+                    <!--<span class="char2">a</span>
+                    <span class="char3">c</span>
+                    <span class="char4">e</span>-->
+                </h1>
+            </div>
+            <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+                <div class="pace-progress-inner"></div>
+            </div>
+        </div>
+    </div>
+    <!--<section id="progress">
+        <div class="progress_loading">
+            <div class="l_container">
+                <img id="progress_m" src="./img/logo.png" alt="CuriousInc" class="progress_img">
+                <div id="demo-progress-2">100%
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <script>
+        $(function () {
+            if (!Modernizr.inputtypes.color)
+                $('.color-label').show();
+
+            var themes = [{
+                name: 'minimal',
+                title: 'Minimal',
+                author: 'adamschwartz'
+            }, {
+                name: 'flash',
+                title: 'Flash',
+                author: 'adamschwartz'
+            }, {
+                name: 'barber-shop',
+                title: 'Barber Shop',
+                author: 'adamschwartz'
+            }, {
+                name: 'mac-osx',
+                title: 'Mac OSX',
+                author: 'adamschwartz'
+            }, {
+                name: 'fill-left',
+                title: 'Fill Left',
+                author: 'adamschwartz'
+            }, {
+                name: 'flat-top',
+                title: 'Flat Top',
+                author: 'adamschwartz'
+            }, {
+                name: 'big-counter',
+                title: 'Big Counter',
+                author: 'adamschwartz'
+            }, {
+                name: 'corner-indicator',
+                title: 'Corner Indicator',
+                author: 'adamschwartz'
+            }, {
+                name: 'bounce',
+                title: 'Bounce',
+                author: 'adamschwartz'
+            }, {
+                name: 'loading-bar',
+                title: 'Loading Bar',
+                author: 'gavJackson'
+            }, {
+                name: 'center-circle',
+                title: 'Center Circle',
+                author: 'adamschwartz'
+            }, {
+                name: 'center-atom',
+                title: 'Center Atom',
+                author: 'kennyglenn'
+            }, {
+                name: 'center-radar',
+                title: 'Center Radar',
+                author: 'kennyglenn'
+            }, {
+                name: 'center-simple',
+                title: 'Center Simple',
+                author: 'dineshgithub'
+            }];
+
+            var init = function () {
+                $.each(themes, function (i, theme) {
+                    $('.themes').append('<div class="theme ' + (i % 2 === 0 ? 'even' : 'odd') + '">' +
+                        '<h3>' + theme.title + '</h3>' +
+                        (theme.author ? '<br/><a class="author" href="https://github.com/' + theme.author + '" target="_blank" rel="nofollow">@' + theme.author + '</a></h4>' : '') +
+                        '<p><a href="#" class="download-link" data-theme="' + theme.name + '">download</a></p>' +
+                        '<div class="browser"><iframe data-theme="' + theme.name + '"></iframe></div>' +
+                        '</div>');
+                });
+
+                var $color = $('input[type="color"]');
+
+                var cssCache = {};
+                var initFrame = function (frame, color) {
+                    if ($color.val() != '#2299dd')
+                        color = $color.val();
+
+                    var $styleEl = $('<style>')
+                    $(frame).contents().find('body').append($styleEl);
+
+                    var context = {};
+                    if (color)
+                        context.color = color;
+
+                    var themeName = $(frame).data('theme')
+                    loadTheme(themeName, function (theme) {
+                        body = compileTheme(theme, context);
+
+                        cssCache[themeName] = body;
+
+                        $styleEl.html(body);
+                    });
+
+                    $(frame).contents().find('.pace').addClass('pace-active');
+                };
+
+                var updateColor = function (color) {
+                    $('.browser iframe').each(function () {
+                        initFrame(this, color);
+                    });
+                };
+
+                var downloadTheme = function (theme) {
+                    location.href = 'data:text/css,' + encodeURIComponent(cssCache[theme]);
+                };
+
+                $('.browser iframe').each(function () {
+                    var _this = this;
+
+                    doc = (this.contentWindow || this.documentWindow).document;
+                    doc.open();
+                    doc.write('' +
+                        '<div class="pace">' +
+                        '<div class="pace-progress" data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);">' +
+                        '<div class="pace-progress-inner"></div>' +
+                        '</div>' +
+                        '<div class="pace-activity"></div>' +
+                        '</div>' +
+                        '');
+                    doc.close();
+
+                    // For some strange reason, the Color library we depend on defines itself
+                    // asyncronously
+                    setTimeout(function () {
+                        initFrame(_this);
+                    }, 0);
+                });
+
+                $color.on('change keyup', function () {
+                    var color = $(this).val();
+                    updateColor(color);
+
+                    var css = '.section.colored, a.button { background: ' + color + '; } a, a:hover, a:active, .header .title .title2:before { color: ' + color + '; }';
+                    if ($('html').hasClass('ie8-and-less')) {
+                        $('#app-colors').get(0).styleSheet.cssText = css
+                    } else {
+                        $('#app-colors').html(css);
+                    }
+                });
+
+                $('a.download-link').click(function (e) {
+                    e.preventDefault();
+
+                    var theme = $(this).data('theme');
+
+                    downloadTheme(theme);
+                });
+            };
+
+            var initTimeout = setTimeout(function () {
+                $(window).unbind('scroll', scrollOnce);
+                init();
+            }, 3000);
+
+            var scrollOnce = function () {
+                $(window).unbind('scroll', scrollOnce);
+                clearTimeout(initTimeout);
+                init();
+            };
+
+            $(window).bind('scroll', scrollOnce);
+        });
+    </script>
+    <script>setTimeout(function () { document.body.className = 'page-loaded' }, 0);</script>
+
+</body>
+
+</html>

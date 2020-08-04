@@ -30,7 +30,7 @@ Style Info:     リセットCSS
     -moz-osx-font-smoothing : grayscale;
     -webkit-font-smoothing : antialiased;
   }
-  img {
+  img:not(.chart1 img) {
     border : 0;
     font-size : 0;
     height : auto;

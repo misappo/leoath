@@ -88,6 +88,7 @@ h4 {
   position : relative;
   line-height : 35px;
   display : inline-block;
+  font-family : azo-sans-web, sans-serif;
 }
 .menu_item a::after {
   position : absolute;
@@ -107,7 +108,7 @@ h4 {
   width : 200px;
   padding : 15px;
   position : absolute;
-  top : 36px;
+  top : 30px;
   left : 50px;
   background : rgba(266,244,244,.25);
   display : inline-block;
@@ -126,7 +127,7 @@ h4 {
   display : inline-block;
 }
 #window a {
-  height : 35px;
+  height : 32px;
   display : none;
 }
 #window.hover a {

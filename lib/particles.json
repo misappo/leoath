@@ -3,7 +3,7 @@
 		"number": {
 			"value": 10,
 			"density": {
-				"enable": false,
+				"enable": true,
 				"value_area": 1e3
 			}
 		},

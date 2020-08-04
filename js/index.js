@@ -1,3 +1,4 @@
+//swiper button
 $('.btn_prev').on('click', function () {
     $('.swiper-button-prev').click()
     return false;
@@ -39,12 +40,39 @@ var mySwiper = new Swiper('.swiper-container', {
     },
 })
 
+//particles-js variable
+window.onresize =//<- resize時も対応
+window.onload = function () {
+    var cnv = document.getElementsByClassName('particles-js-canvas-el')[0];
+    var ctx = cnv.getContext('2d');
+    cnv.setAttribute('width', cnv.clientWidth);  //<- sizeを教えてあげる
+    cnv.setAttribute('height', cnv.clientHeight);//<- sizeを教えてあげる
+
+    var p = false;
+    cnv.addEventListener('mousemove', (e) => {
+        console.log(e.which, cnv);
+        if (e.which == 1) {
+            if (!p) {
+                ctx.beginPath();
+                ctx.strokeStyle = "#fff";
+                ctx.moveTo(e.x, e.y);
+                p = true;
+            } else {
+                ctx.lineTo(e.x, e.y);
+                ctx.stroke();
+            }
+        } else {
+            p = false;
+        }
+    });
+};    
+
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('body', './lib/particles.json', function () {
+particlesJS.load('particles-js', './lib/particles.json', function () {
     //console.log('callback - particles.js config loaded');
 });
  /* =============== ローディングアニメーション =============== */
- imagesProgress();
+// imagesProgress();
 
  function imagesProgress () {
 
