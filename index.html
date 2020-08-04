@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://use.typekit.net/llr0eoa.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/favicon/favicon_16.ico">
     <title>LEOATH</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <script>
+        (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -33,18 +34,45 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <section id="body">
+        <!-- progress -->
+        <div id="progress" class="section colored">
+            <div class="header">
+                <div class="title">
+                    <h1 class="title1">
+                        <span class="char1"><img src="./img/loading_logo_b.png" alt=""></span>
+                        <!--<span class="char2">a</span>
+                    <span class="char3">c</span>
+                    <span class="char4">e</span>-->
+                    </h1>
+                    <h1 class="title2">
+                        <span class="char1"><img src="./img/loading_logo_w.png" alt=""></span>
+                        <!--<span class="char2">a</span>
+                    <span class="char3">c</span>
+                    <span class="char4">e</span>-->
+                    </h1>
+                </div>
+                <div class="progress-label" data-progress-text="0%">
+                </div>
+            </div>
+        </div>
+        <!-- END progress -->
         <div id="particles-js"></div>
         <!-- header -->
         <section id="header" class="fadein_slow">
             <div class="nav">
                 <div class="inner header_inner">
-                    <p class="logo"><a href="./index.html" class="no_stick_"><img src="./img/logo.svg"
-                                alt="ロゴ"><span>LEOATH</span></a>
+                    <p class="logo">
+                        <a href="./index.html" class="no_stick_">
+                            <img src="./img/logo.svg"
+                                 alt="ロゴ"><span>LEOATH</span>
+                        </a>
                     </p>
                     <ul class="contents_menu">
                         <li class="menu_item"><a href="./index.html">Top</a></li>
-                        <li class="menu_item" id="hover"><a href="./service.html">Service<i
-                                    class="fas fa-angle-down"></i></a>
+                        <li class="menu_item" id="hover">
+                            <a href="./service.html">
+                                Service<i class="fas fa-angle-down"></i>
+                            </a>
                             <div id="window">
                                 <a href="./casting.html">Casting</a>
                                 <a href="./web_business.html">Web business</a>
@@ -79,8 +107,9 @@
                     <img class="fade-in" src="./img/door.jpg" alt="ドア">
                     <div class="content_text fade-in delay-04">
                         <h4><span class="marker_thin">若さとアイデアで<br>新時代に革命を起こす。</span></h4>
-                        <p>デジタルシフトが進み、多くの情報が飛び交う現代社会の中で正しい情報の取捨選択を行い持ち前の<span class="color_1">若さ</span>を武器に現代社会にあった<span
-                                class="color_1">新しいサービス</span>を切り開く企業を目指します。</p>
+                        <p>
+                            デジタルシフトが進み、多くの情報が飛び交う現代社会の中で正しい情報の取捨選択を行い持ち前の<span class="color_1">若さ</span>を武器に現代社会にあった<span class="color_1">新しいサービス</span>を切り開く企業を目指します。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -186,12 +215,16 @@
         </section>
         <!-- End news -->
         <!-- footer -->
-        　　<section id="footer">
+        <section id="footer">
             <div class="inner footer_inner">
                 <div class="content_wrapper">
                     <div class="f_logo">
-                        <p class="logo"><a href="./index.html" class="no_stick_"><img src="./img/logo.svg"
-                                    alt="ロゴ"><span>LEOATH</span></a></p>
+                        <p class="logo">
+                            <a href="./index.html" class="no_stick_">
+                                <img src="./img/logo.svg"
+                                     alt="ロゴ"><span>LEOATH</span>
+                            </a>
+                        </p>
                     </div>
                     <div class="address"><span>〒102-0082</span>東京都千田区一番町13-2 一番町KSKビル 3階</div>
                 </div>
@@ -221,13 +254,12 @@
         <div id="stalker"></div>
         <!-- End stalker js -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
         <script src="./lib/particles.js"></script>
         <script src="./lib/jquery.inview.min.js"></script>
         <script src="./js/common.js"></script>
         <script src="./js/index.js"></script>
-        <script>
-        </script>
     </section>
 </body>
 

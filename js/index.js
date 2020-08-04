@@ -44,6 +44,9 @@ var mySwiper = new Swiper('.swiper-container', {
 window.onresize =//<- resize時も対応
 window.onload = function () {
     var cnv = document.getElementsByClassName('particles-js-canvas-el')[0];
+    if (!cnv) {
+        return false;
+    }
     var ctx = cnv.getContext('2d');
     cnv.setAttribute('width', cnv.clientWidth);  //<- sizeを教えてあげる
     cnv.setAttribute('height', cnv.clientHeight);//<- sizeを教えてあげる
@@ -71,15 +74,23 @@ window.onload = function () {
 particlesJS.load('particles-js', './lib/particles.json', function () {
     //console.log('callback - particles.js config loaded');
 });
- /* =============== ローディングアニメーション =============== */
-// imagesProgress();
+/* =============== ローディングアニメーション =============== */
+
+setTimeout(function () { document.body.className = 'page-loaded' }, 0);
+imagesProgress();
+
+function upateLoadingImage(current) {
+    var maxWidthPar = 71;
+    var progress = current / 100;
+    var width = maxWidthPar * progress;
+    $('.header .title .title2 .char1').css("width", width + "%");
+    $('.progress-label').attr("data-progress-text", Math.round(current) + "%");
+    $('.progress-label').text( Math.round(current) + "%");
+}
 
  function imagesProgress () {
 
      var $container    = $('#progress'),
-         $progressStart  = $container.find('.progress_start'),
-         $progressLoading  = $container.find('.progress_loading'),
-         $progressImg  = $container.find('.progress_img'),
          imgLoad       = imagesLoaded('body'),
          imgTotal      = imgLoad.images.length,
          imgLoaded     = 0,
@@ -93,34 +104,12 @@ particlesJS.load('particles-js', './lib/particles.json', function () {
      function updateProgress () {
          var target = (imgLoaded / imgTotal) * 100;
          current += (target - current) * 0.1;
-
-         if(current >= 10){
-             $progressStart.animate({ left: '100%' }, 1000, 'easeInOutQuint');
-         }
+         upateLoadingImage(current);
 
          if(current >= 100){
              clearInterval(progressTimer);
-             $container.addClass('progress_complete');
-             $progressImg
-                 .animate({ opacity: 0 }, 250, function () {
-                     $container.animate({ left: '100%' }, 1000, 'easeInOutQuint');
-             });
-
-       setTimeout(function(){
-         $('#header').addClass('active');
-       },2000);
-
-       setTimeout(function(){
-         $('.top_content').addClass('open');
-       },1400);
-
-       setTimeout(function(){
-         $('.top_low_content').addClass('open');
-       },1800);
-
-       setTimeout(function(){
-         $('.contact_low_content').addClass('active');
-       },1800);
+             $container.animate({ left: '100%', opacity: 0 }, 1000);
+             setTimeout(function () { $container.remove(); }, 1000);
          }
 
          if (current > 99.9) {
