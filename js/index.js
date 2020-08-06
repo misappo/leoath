@@ -80,7 +80,7 @@ setTimeout(function () { document.body.className = 'page-loaded' }, 0);
 imagesProgress();
 
 function upateLoadingImage(current) {
-    var maxWidthPar = 71;
+    var maxWidthPar = 60;
     var progress = current / 100;
     var width = maxWidthPar * progress;
     $('.header .title .title2 .char1').css("width", width + "%");
@@ -108,7 +108,7 @@ function upateLoadingImage(current) {
 
          if(current >= 100){
              clearInterval(progressTimer);
-             $container.animate({ left: '100%', opacity: 0 }, 1000);
+             $container.animate({ left: '100%' }, 1000);
              setTimeout(function () { $container.remove(); }, 1000);
          }
 

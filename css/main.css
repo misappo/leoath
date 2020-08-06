@@ -750,7 +750,8 @@ Style Info:     メインCSS
 }
 /*layout*/
 #register_info {
-  background : linear-gradient(to right, #fff 40%, #b4dfff 63%, #85b1de 77%, #699bc6 88%, #5381af);
+  /*background : linear-gradient(to right, #fff 40%, #b4dfff 63%, #85b1de 77%, #699bc6 88%, #5381af);*/
+  background : linear-gradient(to right, #fff 0%, #b4dfff 35.15%, #85b1de 65.02%, #699bc6 85.22%, #5381af 100%);
 }
 #register_info .content_wrapper {
   padding : 50px 0 60px;
@@ -1671,91 +1672,8 @@ label {
   transition-delay : .2s;
 }
 /* ------------------------------------ */
-/* loading */
+/* particles js */
 /* ------------------------------------ */
-#progress .progress_loading img {
-  position : absolute;
-  top : 50%;
-  left : 50%;
-  -webkit-transform : translate(-50%, -50%);
-     -moz-transform : translate(-50%, -50%);
-      -ms-transform : translate(-50%, -50%);
-          transform : translate(-50%, -50%);
-}
-#progress {
-  display : block;
-  width : 100%;
-  height : 100vh;
-  padding : 0;
-  overflow : hidden;
-  z-index : 9999;
-  position : fixed;
-  top : 0;
-  bottom : 0;
-  left : 0;
-}
-#progress .progress_loading {
-  display : block;
-  width : 100%;
-  height : 100%;
-  /*background : #000;*/
-  z-index : 9999;
-  top : 0;
-  left : 0;
-}
-#progress .progress_loading img {
-  position : absolute;
-  top : 50%;
-  left : 50%;
-  width : 320px;
-  -webkit-transform : translate(-50%, -50%);
-     -moz-transform : translate(-50%, -50%);
-      -ms-transform : translate(-50%, -50%);
-          transform : translate(-75%, -50%);
-}
-.l_container {
-  position : absolute;
-  width : 500px;
-  height : 500px;
-  top : 50%;
-  left : 50%;
-  -webkit-transform : translate(-50%, -50%);
-     -moz-transform : translate(-50%, -50%);
-      -ms-transform : translate(-50%, -50%);
-          transform : translate(-50%, -50%);
-}
-.l_container #demo-progress-2 {
-  position : absolute;
-  left : 50%;
-  top : 50%;
-  right : 0;
-  transform : translate(45%, -50%);
-  padding-left : 25px;
-}
-.l_container #demo-progress-2::before {
-  content : '';
-  width : 55px;
-  height : 2px;
-  display : inline-block;
-  vertical-align : middle;
-  background : rgb(0, 0, 0);
-  margin : 0 8px;
-}
-#progress-box {
-  width : 100%;
-  height : 60px;
-  background : #c5c5c5;
-  position : relative;
-}
-#progress-bar {
-  width : 0;
-  height : 60px;
-  background : #00cab9;
-  position : absolute;
-  left : 0;
-  top : 0;
-}
-
 #body {
   position : absolute;
   height : 100%;
@@ -1767,81 +1685,60 @@ label {
   top : 0;
   left : 0;
 }
-/*.loading-wrap {
-  position : fixed;
-  height : 100vh;
-  width : 100vw;
-  /*ackground-color : pink;*/
-/*left : 0;
-  top : 0;
-  z-index : 9999;
+/* ------------------------------------ */
+/* loading */
+/* ------------------------------------ */
+#progress {
+  display : block;
   width : 100%;
-  height : 100%;
-  line-height : 1.3;
+  height : 100vh;
+  padding : 0;
+  overflow : hidden;
+  z-index : 9999;
+  background : #fff;
+  position : fixed;
+  top : 0;
+  bottom : 0;
+  left : 0;
 }
-.loading-anime {
-  animation-name : loadinganime;
-  animation-timing-function : ease-out;
-  animation-duration : 5s;
-  animation-fill-mode : forwards;
+.section .colored {
+  position : relative;
 }
-.loading-anime img {
-  opacity : 0;
-}
-.lo img {
-  animation-name : lo-anime;
-  animation-timing-function : ease-in-out;
-  animation-duration : 1s;
-  background : rgba(255,255,255,.45);
-}
-@keyframes lo-anime {
-  from {
-    transform : translateX(0);
-  }
-  30%,70% {
-    transform : translateX(0);
-  }
-  to {
-    transform : translateX(100%);
-  }
-}
-@keyframes loadinganime {
-  from {
-    transform : translateX(0);
-  }
-  30%,70% {
-    transform : translateX(0);
-  }
-  to {
-    transform : translateX(100%);
-  }
-}*/
-
 .header {
-  color : #000;
+  /*color : #000;*/
   -webkit-transition : opacity 1s;
      -moz-transition : opacity 1s;
        -o-transition : opacity 1s;
           transition : opacity 1s;
-  text-align : center;
   margin : auto;
   top : 0;
   left : 0;
   bottom : 0;
   right : 0;
   position : absolute;
-  width : 29rem;
+  width : 35rem;
   max-width : 100%;
   height : 100%;
   z-index : 1;
 }
-.header h1 {
-  /*font-size: 10rem;*/
-  font-weight : 800;
-  text-transform : uppercase;
-  letter-spacing : .05em;
+.header .title,.progress-label {
+  opacity : 1;
+  animation-name : fadeout;
+  animation-duration : 1s;
+  animation-fill-mode : forwards;
+  animation-delay : 1s;
 }
-
+@keyframes fadeout {
+  0% {
+    opacity : 1;
+  }
+  10% {
+    opacity : 5%;
+  }
+  100% {
+    opacity : 0;
+  }
+}
 .header .title h1 {
   position : absolute;
   margin : auto;
@@ -1849,30 +1746,16 @@ label {
   left : 0;
   right : 0;
   bottom : 3rem;
-  height : 3.8em;
-  text-align : center;
-}
-.header .title .title1 {
-  color : #eee;
-  color : rgba(0, 0, 0, .1);
+  height : 4.5em;
 }
 .header .title span {
   display : block;
   position : absolute;
   top : 0;
 }
-.header .title .title2:hover:before {
-  opacity : 1;
-  -webkit-transform : translateY(0px);
-}
-
 .header .title .char1 {
   left : .5%;
   width : 22%;
-}
-
-.header .title .char1 img {
-  width : auto;
 }
 .section {
   position : relative;
@@ -1883,19 +1766,6 @@ label {
      -moz-box-sizing : border-box;
           box-sizing : border-box;
 }
-
-.section.colored {
-  color : #fff;
-}
-
-.section.colored .header .title .title2,.title2 img {
-  color : #fff;
-}
-
-.section.colored .header .subtitle {
-  color : #fff;
-}
-
 .header .title .title2 span {
   width : 0;
   overflow : hidden;
@@ -1907,10 +1777,13 @@ label {
   position : absolute;
   vertical-align : middle;
   background : #000;
-  margin : 0 8px;
-  top : 50%;
-  left : 43%;
+  top : 60%;
+  left : 356px;
 }
-.page-loaded .header .title .title2 .char1 {
-  width : 41%;
+.progress-label {
+  position : absolute;
+  top : 49%;
+  left : 425px;
+  font-size : 58px;
+  font-weight : bold;
 }
