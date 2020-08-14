@@ -1,0 +1,238 @@
+@charset 'utf-8';
+/* -----------------------------------------------------------
+CSS Information
+
+File name:      servics.css
+Created:        2020-07
+Style Info:     サービスCSS
+----------------------------------------------------------- */
+/* ------------------------------------ */
+/* heading */
+/* ------------------------------------ */
+.heading_l {
+  position : relative;
+  text-align : center;
+  font-weight : bold;
+  font-size : 35px;
+  margin-bottom : 40px;
+}
+.heading_l::before {
+  position : absolute;
+  left : 0;
+  transform : translateY(-50%);
+  font-size : 120px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+  color : #f8f8f8;
+  border : #f8f8f8;
+}
+.heading_r {
+  position : relative;
+  text-align : center;
+  font-weight : bold;
+  margin-bottom : 40px;
+  font-size : 35px;
+}
+.heading_r::before {
+  position : absolute;
+  right : 0;
+  transform : translateY(-50%);
+  font-size : 120px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+  color : #f8f8f8;
+  border : #f8f8f8;
+  z-index : -1;
+}
+/* ------------------------------------ */
+/* marker */
+/* ------------------------------------ */
+.marker_thin {
+  background : linear-gradient(transparent 70%,rgba(0,147,255,.5) 0);
+}
+/* ------------------------------------ */
+/* button */
+/* ------------------------------------ */
+.link_btn {
+  display : inline-block;
+  -webkit-box-flex : 1;
+  flex : 1 1 auto;
+  padding : 10px 20px;
+  border : 1px solid #000;
+  text-align : center;
+  text-transform : uppercase;
+  position : relative;
+  overflow : hidden;
+  -webkit-transition : 1s;
+          transition : 1s;
+  border-radius : 30px;
+  background-color : rgba(0, 0, 0, 0);
+  z-index : 1;
+  font-size : 14px;
+  font-family : azo-sans-web, sans-serif;
+  line-height : 1.2;
+}
+.link_btn::after {
+  position : absolute;
+  -webkit-transition : 1s;
+          transition : 1s;
+  content : '';
+  width : 0;
+  left : 50%;
+  bottom : -5px;
+  height : 3px;
+  background : #000;
+  height : 120%;
+  left : -10%;
+  -webkit-transform : skewX(15deg);
+          transform : skewX(15deg);
+  z-index : -1;
+}
+.link_btn:hover {
+  cursor : pointer;
+  color : white;
+}
+.link_btn:hover:after {
+  left : -10%;
+  width : 120%;
+}
+/* ------------------------------------ */
+/* top visual                           */
+/* ------------------------------------ */
+.h_heading {
+  font-size : 70px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+}
+.h_sub_text {
+  display : block;
+  margin-bottom : 67px;
+  font-size : 20px;
+  line-height : 1;
+  text-align : center;
+  padding-right : 75px;
+}
+.h_text {
+  margin-bottom : 20px;
+  white-space : nowrap;
+}
+.info_txt {
+  line-height : 2;
+}
+.h_container {
+  display : flex;
+  align-items : end;
+  justify-content : space-between;
+  min-height : 588px;
+}
+.h_box {
+  width : 26%;
+  padding-top : 125px;
+}
+.h_container::after {
+  content : '';
+  width : 750px;
+  height : 470px;
+  right : 48px;
+  top : 118px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+#services {
+  position : relative;
+  padding : 155px 0 60px;
+}
+/* ------------------------------------ */
+/* casting,web_ad,web_production,beauty */
+/* ------------------------------------ */
+h4 {
+  margin-bottom : 40px;
+  white-space : pre;
+  display : inline-block;
+  text-align : left;
+}
+.content_text > p {
+  height : calc( 2.4em * 5 );
+  display : inline-block;
+  text-align : left;
+  line-height : 1.8;
+}
+/*button*/
+.btn {
+  text-align : center;
+}
+/*layput*/
+#casting .content_wrapper,#web_ad .content_wrapper,#web_production .content_wrapper,#beauty .content_wrapper {
+  min-height : 560px;
+}
+#casting,#web_ad,#web_production,#beauty {
+  position : relative;
+  padding : 100px 0 60px;
+}
+#casting .content_text,#web_production .content_text {
+  transform : translateX(570px);
+}
+#web_ad .content_text,#beauty .content_text {
+  transform : translateX(200px);
+}
+#casting .inview-in .content_text,#web_production  .inview-in .content_text {
+  left : 570px;
+}
+#web_ad  .inview-in .content_text,#beauty  .inview-in .content_text {
+  left : 200px;
+}
+.content_text {
+  display : table;
+  top : 120px;
+  width : 480px;
+  height : 440px;
+  position : absolute;
+  background : #fff;
+  padding : 48px 60px 10px 45px;
+  box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
+  text-align : center;
+}
+#casting .bg2,#web_production .bg2 {
+  right : 0;
+  top : 38px;
+}
+#web_ad .bg2,#beauty .bg2 {
+  left : 0;
+  top : 60px;
+}
+.bg2 {
+  content : '';
+  width : 800px;
+  height : 340px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+#casting img,#web_production img {
+  padding-left : 90px;
+}
+#web_ad .photo,#beauty .photo {
+  text-align : right;
+  padding-right : 100px;
+}
+/* casting */
+#casting .heading_r::before {
+  content : 'Casting';
+}
+/* web ad */
+#web_ad .heading_l::before {
+  content : 'Web Ad';
+  z-index : -1;
+}
+/* web production */
+#web_production .heading_r::before {
+  content : 'Production';
+}
+/* beauty */
+#beauty .heading_l::before {
+  content : 'Beauty';
+  z-index : -1;
+}

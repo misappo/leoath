@@ -6,17 +6,10 @@ File name:      mian.css
 Created:        2020-07
 Style Info:     メインCSS
 ----------------------------------------------------------- */
-#about_us,#main,#service,#event,#solution,#news,#services,#casting,#web_ad,#web_production,#beauty,#d_casting,#influencer,#point,#register_info,#schedule,#d_contact,#web_business,#w_ad,#support,#w_point,#w_production,#w_schedule,#d_beauty,#company,#philosophy,#company_info,#contact,#header,#footer {
-  line-height : 1.3;
-}
 /* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
-#about_us h4,#service h4,#event h4,#solution h4,#news h4 {
-  margin-bottom : 68px;
-  letter-spacing : 2px;
-}
-#about_us .heading_l,#service .heading_l,#event .heading_l,#solution .heading_l,#news .heading_l,#w_point .heading_l {
+#w_point .heading_l {
   font-family : azo-sans-web, sans-serif;
   font-size : 45px;
   line-height : 1.2;
@@ -52,14 +45,6 @@ Style Info:     メインCSS
   border : #f8f8f8;
   z-index : -1;
 }
-.sub_text {
-  display : inline-block;
-  width : 100%;
-  text-align : center;
-  font-weight : normal;
-  line-height : 1;
-  margin-bottom : 43px;
-}
 .sub_l {
   font-size : 20px;
 }
@@ -76,7 +61,7 @@ Style Info:     メインCSS
   display : inline-block;
   background : #2e75b6;
   color : #fff;
-  padding : 7px 14px;
+  padding : 5px 14px;
 }
 .color_1 {
   color : #3162e6;
@@ -182,7 +167,7 @@ Style Info:     メインCSS
   line-height : 2;
 }
 #web_business p {
-  width : 70%;
+  width : 400px;
 }
 /*#services .content_wrapper,#d_casting .content_wrapper,#web_business .content_wrapper {
   display : flex;
@@ -248,7 +233,6 @@ Style Info:     メインCSS
   font-size : 20px;
   font-weight : bold;
   text-align : center;
-  padding-right : 125px;
 }
 .h_name::before,.h_name::after {
   content : '';
@@ -298,6 +282,9 @@ Style Info:     メインCSS
   line-height : 1.2;
   top : 100px;
 }*/
+#about_us p {
+  line-height : 2;
+}
 .bg1 {
   width : 907px;
   height : 340px;
@@ -335,6 +322,7 @@ Style Info:     メインCSS
 }
 #service p {
   margin-bottom : 60px;
+  line-height : 1.8;
 }
 .swiper-container {
   box-sizing : content-box;
@@ -435,6 +423,7 @@ Style Info:     メインCSS
 }
 #event .content_text p {
   margin-bottom : 70px;
+  line-height : 2;
 }
 .soon {
   display : block;
@@ -442,6 +431,7 @@ Style Info:     メインCSS
 }
 #event h4 {
   text-align : center;
+  font-family : azo-sans-web, sans-serif;
 }
 /* solution */
 #solution .heading_l::before {
@@ -449,7 +439,7 @@ Style Info:     メインCSS
 }  
 #solution {
   width : 100%;
-  background : linear-gradient(#fff 70%, #2e75b6 20%);
+  background : linear-gradient(#fff 52%, #2e75b6 40%);
   padding : 90px 0 65px;
   margin-bottom : 55px;
 }
@@ -464,13 +454,14 @@ Style Info:     メインCSS
   border-radius : 33px;
   background : #fff;
   text-align : center;
-  padding : 22px 60px 35px;
+  padding : 22px 40px 35px;
 }
 .solution_item img {
   margin-bottom : 7px;
 }
 .solution_item p {
   font-size : 14px;
+  line-height : 1.5;
 }
 #solution .item_text {
   display : block;
@@ -544,13 +535,18 @@ Style Info:     メインCSS
 #casting h4,#web_ad h4,#web_production h4,#beauty h4 {
   margin-bottom : 40px;
   white-space : pre;
+  display : inline-block;
+  text-align : left;
 }
 #services .heading_r,#casting .heading_r,#web_ad .heading_r,#web_production .heading_r,#beauty .heading_r {
   margin-bottom : 40px;
   font-size : 35px;
 }
 #casting p,#web_ad p,#web_production p,#beauty p {
-  height : calc( 2.2em * 5 );
+  height : calc( 2.8em * 5 );
+  display : inline-block;
+  text-align : left;
+  line-height : 2;
 }
 /*button*/
 .btn {
@@ -558,7 +554,7 @@ Style Info:     メインCSS
 }
 /*layput*/
 #casting .content_wrapper,#web_ad .content_wrapper,#web_production .content_wrapper,#beauty .content_wrapper {
-  min-height : 560px;
+  min-height : 596.67px;
 }
 #casting,#web_ad,#web_production,#beauty {
   position : relative;
@@ -585,6 +581,7 @@ Style Info:     メインCSS
   background : #fff;
   padding : 66px 50px 24px;
   box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
+  text-align : center;
 }
 /*#casting .content_wrapper::after,#web_production .content_wrapper::after {
   right : 0;
@@ -651,7 +648,7 @@ Style Info:     メインCSS
 #influencer .heading_r::before {
   content : 'Influencer';
 }
-#influencer,#point,#schedule,#d_contact {
+#influencer,#point,#schedule {
   position : relative;
   padding : 100px 0 70px;
 }
@@ -681,7 +678,7 @@ Style Info:     メインCSS
   content : 'Point';
 }
 #point .num_item {
-  height : 312px;
+  height : 350px;
 }
 #point .num_item img {
   margin-bottom : 50px;
@@ -696,7 +693,7 @@ Style Info:     メインCSS
   position : relative;
 }
 .num_item {
-  width : 293px;
+  width : 300px;
   background : #f8f8f8;
   text-align : center;
   padding : 15px 30px 64px;
@@ -710,6 +707,7 @@ Style Info:     メインCSS
 }
 .sec_box .txt {
   text-align : left;
+  line-height : 1.5;
 }
 /* ------------------------------------ */
 /* register_info */
@@ -731,12 +729,12 @@ Style Info:     メインCSS
 .r_list li::before {
   background : transparent url(../img/check_icon.png) no-repeat center center/cover;
   content : '';
-  height : 50px;
-  left : 0;
+  height : 35px;
+  left : 2%;
   position : absolute;
-  top : 22%;
+  top : 36%;
   transform : translateY(-50%);
-  width : 50px;
+  width : 35px;
 }
 /*.r_list li:nth-child(2)::before {
   width : 10px;
@@ -750,17 +748,28 @@ Style Info:     メインCSS
 }
 /*layout*/
 #register_info {
+  padding : 60px 0;
+  position : relative;
+  margin-bottom : 40px;
   /*background : linear-gradient(to right, #fff 40%, #b4dfff 63%, #85b1de 77%, #699bc6 88%, #5381af);*/
+}
+#register_info:after {
+  content : '';
+  width : 1207px;
+  height : 100%;
+  position : absolute;
+  z-index : -1;
+  top : 0;
+  right : 0;
   background : linear-gradient(to right, #fff 0%, #b4dfff 35.15%, #85b1de 65.02%, #699bc6 85.22%, #5381af 100%);
 }
 #register_info .content_wrapper {
-  padding : 50px 0 60px;
+  padding-top : 50px;
   display : flex;
   justify-content : space-between;
 }
 /*text*/
 #register_info .r_text {
-  padding-top : 60px;
   font-size : 30px;
 }
 #register_info p {
@@ -780,7 +789,9 @@ Style Info:     メインCSS
 #schedule .content_wrapper {
   display : flex;
   align-items : stretch;
-  padding : 60px 0 55px;
+  padding : 60px 0 75px;
+}
+#schedule .content_wrapper:not(:last-of-type) {
   margin-bottom : 30px;
 }
 /*list*/
@@ -826,6 +837,8 @@ Style Info:     メインCSS
 #schedule .content_text {
   border : solid 1px #707070;
   padding : 20px 35px 25px ;
+  box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
+  line-height : 1.5;
 }
 #schedule .content_text li {
   list-style-type : disc;
@@ -847,6 +860,11 @@ Style Info:     メインCSS
 /* d_contact */
 /* ------------------------------------ */
 /*layout*/
+#d_contact {
+  position : relative;
+  background : #f8f8f8;
+  padding : 45px 0 70px;
+}
 #d_contact .inner {
   padding-left : 35px;
   padding-right : 70px;
@@ -859,7 +877,7 @@ Style Info:     メインCSS
 .item1 .txt {
   padding : 40px 250px 0 0;
   margin-bottom : 50px;
-  line-height : 2;
+  line-height : 2.2;
 }
 .item1 .txtcol {
   position : absolute;
@@ -885,16 +903,17 @@ Style Info:     メインCSS
 .item1 {
   padding-left : 450px;
 }
-#d_contact .item .img {
+/*#d_contact .item .img {
   text-align : center;
   padding : 46px 0;
   position : relative;
-}
+}*/
 .imgbox .img1,.imgbox .img2,.imgbox .img3,.imgbox .img4,.imgbox .img5,.imgbox .img6,.imgbox .img7 {
   background-position : center;
   background-repeat : no-repeat;
   width : 114px;
   height : 141px;
+  display : block;
 }
 .img1 {
   background-image : url(../img/icon1.png);
@@ -916,6 +935,9 @@ Style Info:     メインCSS
 }
 .img7 {
   background-image : url(../img/icon7.png);
+}
+.icon_item {
+  text-align : center;
 }
 .imgbox .icon_item:not(:nth-child(4)) {
   margin : 0 70px 10px 0;
@@ -953,7 +975,7 @@ Style Info:     メインCSS
 .img_wrapper {
   opacity : 0;
   position : relative;
-  width : 100%;
+  width : 700px;
 }
 .img_wrapper img {
   width : 690px;
@@ -989,8 +1011,12 @@ Style Info:     メインCSS
   padding-right : 200px;
 }*/
 /*text*/
-.item2 .txt {
+#w_ad .txt {
   padding : 65px 25px 0 210px;
+  line-height : 2;
+}
+#w_production .txt {
+  padding : 65px 110px 0 210px;
   line-height : 2;
 }
 /*filter*/
@@ -1068,9 +1094,12 @@ Style Info:     メインCSS
   height : 200px;
   background : #fff;
   box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
-  padding : 60px 20px;
+  padding : 53px 20px;
 }
-.bg3 {
+#support p {
+  line-height : 1.5;
+}
+#support::after {
   content : '';
   width : 1350px;
   height : 100%;
@@ -1086,6 +1115,7 @@ Style Info:     メインCSS
 }
 #support .content_wrapper:nth-last-child(2) {
   margin-bottom : 90px;
+  padding-right : 31px;
 }
 #support .content_wrapper:nth-last-child(1) img {
   width : 421px;
@@ -1183,6 +1213,10 @@ Style Info:     メインCSS
   margin-bottom : 60px;
   font-size : 20px;
   white-space : nowrap;
+  line-height : 1.35;
+}
+.w_item .content_text {
+  line-height : 1.5;
 }
 #w_point .w_item li {
   list-style-type : disc;
@@ -1205,6 +1239,9 @@ Style Info:     メインCSS
 /*heading*/
 #w_schedule .heading_l::before {
   content : 'Schedule';
+}
+#w_schedule .sec_box .txt {
+  font-size : 14px;
 }
 /*icon*/
 /*.arrow {
@@ -1268,6 +1305,7 @@ Style Info:     メインCSS
 #philosophy p {
   font-size : 25px;
   padding : 50px 70px;
+  line-height : 1.5;
 }
 #philosophy h4,#philosophy p {
   color : #fff;
@@ -1304,8 +1342,7 @@ Style Info:     メインCSS
   padding-left : 70px;
 }
 .c_table td {
-  text-align : center;
-  padding-right : 380px;
+  width : 35%;
 }
 /* ------------------------------------ */
 /* contact */
@@ -1345,7 +1382,6 @@ Style Info:     メインCSS
   border : 1px solid #707070;
   width : 100%;
   background-color : #fcfcfc;
-  border-radius : 5px;
   padding-left : 1em;
 }
 textarea {
@@ -1411,8 +1447,8 @@ label {
 @-webkit-keyframes slideInRight {
   from {
     opacity : 0;
-    -webkit-transform : translate3d(100%, 0, 0);
-            transform : translate3d(100%, 0, 0);
+    -webkit-transform : translate3d(40%, 0, 0);
+            transform : translate3d(40%, 0, 0);
   }
   to {
     opacity : 1;
@@ -1423,8 +1459,8 @@ label {
 @keyframes slideInRight {
   from {
     opacity : 0;
-    -webkit-transform : translate3d(-100%, 0, 0);
-            transform : translate3d(-100%, 0, 0);
+    -webkit-transform : translate3d(-40%, 0, 0);
+            transform : translate3d(-40%, 0, 0);
   }
   to {
     opacity : 1;
@@ -1490,8 +1526,8 @@ label {
   opacity : 0;
 }
 .inview-in .slideIn-right {
-  -webkit-animation-duration : 1.5s;
-          animation-duration : 1.5s;
+  -webkit-animation-duration : 2.2s;
+          animation-duration : 2.2s;
   -webkit-animation-fill-mode : both;
           animation-fill-mode : both;
   -webkit-animation-name : slideInRight;
@@ -1504,8 +1540,8 @@ label {
 }
 
 .inview-in .fade-in {
-  -webkit-animation-duration : 1.5s;
-          animation-duration : 1.5s;
+  -webkit-animation-duration : 3s;
+          animation-duration : 3s;
   -webkit-animation-fill-mode : both;
           animation-fill-mode : both;
   -webkit-animation-name : fadeIn;
@@ -1530,8 +1566,8 @@ label {
   opacity : 0;
 }
 .inview-in .fade-in-stairs > * {
-  -webkit-animation-duration : 1.5s;
-          animation-duration : 1.5s;
+  -webkit-animation-duration : 6s;
+          animation-duration : 6s;
   -webkit-animation-fill-mode : both;
           animation-fill-mode : both;
   -webkit-animation-name : fadeIn;
@@ -1542,8 +1578,8 @@ label {
   opacity : 0;
 }
 .inview-in .fade-in-s > * {
-  -webkit-animation-duration : 1.5s;
-          animation-duration : 1.5s;
+  -webkit-animation-duration : 2.4s;
+          animation-duration : 2.4s;
   -webkit-animation-fill-mode : both;
           animation-fill-mode : both;
   -webkit-animation-name : fadeIn;
@@ -1551,7 +1587,7 @@ label {
   transition-timing-function : cubic-bezier(.23, 1, .32, 1);
 }
 .inview-in .fade-in-stairs > *:nth-child(2) {
-  animation-delay : .2s;
+  animation-delay : 1s;
   /*width : 48px;
   position : absolute;
   left : 280px;
@@ -1559,10 +1595,10 @@ label {
   z-index : 2;*/
 }
 .inview-in .fade-in-stairs > *:nth-child(3) {
-  animation-delay : .4s;
+  animation-delay : 1.6s;
 }
 .inview-in .fade-in-stairs > *:nth-child(4) {
-  animation-delay : .6s;
+  animation-delay : 2.4s;
   /*width : 48px;*
   position : absolute;
   left : 597px;
@@ -1570,10 +1606,10 @@ label {
   z-index : 2;*/
 }
 .inview-in .fade-in-stairs > *:nth-child(5) {
-  animation-delay : .8s;
+  animation-delay : 3s;
 }
 .inview-in .fade-in-stairs > *:nth-child(6) {
-  animation-delay : 1s;
+  animation-delay : 3.6s;
   /*width : 48px;
   position : absolute;
   left : 910px;
@@ -1581,22 +1617,22 @@ label {
   z-index : 2;*/
 }
 .inview-in .fade-in-stairs > *:nth-child(7) {
-  animation-delay : 1.2s;
+  animation-delay : 4.2s;
 }
 .inview-in .fade-in-stairs > *:nth-child(8) {
-  animation-delay : 1.4s;
+  animation-delay : 4.8s;
 }
 .inview-in .fade-in-stairs > *:nth-child(9) {
-  animation-delay : 1.6s;
+  animation-delay : 5.4s;
 }
 .inview-in .fade-in-stairs > *:nth-child(10) {
-  animation-delay : 1.8s;
+  animation-delay : 6s;
 }
 .inview-in .fade-in-stairs > *:nth-child(11) {
-  animation-delay : 2s;
+  animation-delay : 6.6s;
 }
 .inview-in .fade-in-s > *:nth-child(2) {
-  animation-delay : .2s;
+  animation-delay : .4s;
   width : 48px;
   position : absolute;
   left : 280px;
@@ -1604,10 +1640,10 @@ label {
   z-index : 2;
 }
 .inview-in .fade-in-s > *:nth-child(3) {
-  animation-delay : .4s;
+  animation-delay : .8s;
 }
 .inview-in .fade-in-s > *:nth-child(4) {
-  animation-delay : .6s;
+  animation-delay : 1.2s;
   width : 48px;
   position : absolute;
   left : 597px;
@@ -1615,10 +1651,10 @@ label {
   z-index : 2;
 }
 .inview-in .fade-in-s > *:nth-child(5) {
-  animation-delay : .8s;
+  animation-delay : 1.6s;
 }
 .inview-in .fade-in-s > *:nth-child(6) {
-  animation-delay : 1s;
+  animation-delay : 2s;
   width : 48px;
   position : absolute;
   left : 910px;
@@ -1626,39 +1662,39 @@ label {
   z-index : 2;
 }
 .inview-in .fade-in-s > *:nth-child(7) {
-  animation-delay : 1.2s;
+  animation-delay : 2.4s;
 }
 .delay-02 {
-  animation-delay : .2s;
-}
-.delay-04 {
-  animation-delay : .4s;
-}
-.delay-06 {
-  animation-delay : .6s;
-}
-.delay-08 {
   animation-delay : .8s;
 }
-.delay-10 {
-  animation-delay : 1s;
-}
-.delay-12 {
+.delay-04 {
   animation-delay : 1.2s;
 }
-.delay-14 {
-  animation-delay : 1.4s;
-}
-.delay-16 {
-  animation-delay : 1.6s;
-}
-.delay-18 {
+.delay-06 {
   animation-delay : 1.8s;
 }
-.delay-20 {
-  animation-delay : 2s;
+.delay-08 {
+  animation-delay : 2.2s;
 }
-.txtcol {
+.delay-10 {
+  animation-delay : 2.6s;
+}
+.delay-12 {
+  animation-delay : 3s;
+}
+.delay-14 {
+  animation-delay : 3.4s;
+}
+.delay-16 {
+  animation-delay : 3.8s;
+}
+.delay-18 {
+  animation-delay : 4.2s;
+}
+.delay-20 {
+  animation-delay : 4.8s;
+}
+/*.txtcol {
   opacity : 0;
   -webkit-transform : translateX(-30px);
           transform : translateX(-30px);
@@ -1670,7 +1706,7 @@ label {
   -webkit-transform : translateX(0);
           transform : translateX(0);
   transition-delay : .2s;
-}
+}*/
 /* ------------------------------------ */
 /* particles js */
 /* ------------------------------------ */

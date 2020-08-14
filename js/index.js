@@ -76,7 +76,6 @@ particlesJS.load('particles-js', './lib/particles.json', function () {
 });
 /* =============== ローディングアニメーション =============== */
 
-setTimeout(function () { document.body.className = 'page-loaded' }, 0);
 imagesProgress();
 
 function upateLoadingImage(current) {

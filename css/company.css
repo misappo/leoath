@@ -1,0 +1,213 @@
+@charset 'utf-8';
+/* -----------------------------------------------------------
+CSS Information
+
+File name:      company.css
+Created:        2020-07
+Style Info:     カンパニーCSS
+----------------------------------------------------------- */
+/* ------------------------------------ */
+/* heading */
+/* ------------------------------------ */
+.heading_r {
+  position : relative;
+  text-align : center;
+  font-weight : bold;
+}
+.heading_r::before {
+  position : absolute;
+  right : 0;
+  transform : translateY(-50%);
+  font-size : 120px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+  color : #f8f8f8;
+  border : #f8f8f8;
+  z-index : -1;
+}
+/* ------------------------------------ */
+/* top visual */
+/* ------------------------------------ */
+.h_heading {
+  font-size : 70px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+}
+.h_sub_text {
+  display : block;
+  margin-bottom : 67px;
+  font-size : 20px;
+  line-height : 1;
+  text-align : center;
+}
+.h_text {
+  margin-bottom : 20px;
+  white-space : nowrap;
+}
+.info_txt {
+  line-height : 2;
+}
+.h_container {
+  display : flex;
+  align-items : end;
+  justify-content : space-between;
+  min-height : 588px;
+}
+.h_container::after {
+  content : '';
+  width : 750px;
+  height : 470px;
+  right : 48px;
+  top : 118px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+#company {
+  position : relative;
+  padding : 155px 0 60px;
+}
+.h_box {
+  width : 26%;
+  padding-top : 125px;
+}
+.txt_inner {
+  position : absolute;
+  top : 350px;
+}
+/*.slogan {
+  font-size : 70px;
+}*/
+.h_name {
+  font-size : 20px;
+  font-weight : bold;
+  text-align : center;
+}
+.h_name::before,.h_name::after {
+  content : '';
+  width : 12px;
+  height : 2px;
+  background : #000;
+  display : inline-block;
+  vertical-align : middle;
+  margin : 0 8px;
+}
+/* ------------------------------------ */
+/* philosophy,company_info,contact      */
+/* ------------------------------------ */
+/*layout*/
+#philosophy {
+  padding-top : 100px;
+}
+.container {
+  padding : 60px 0 45px 0;
+  margin-bottom : 60px;
+  width : 100%;
+  background : #2e75b6;
+}
+/*heading*/
+#philosophy .heading_r,#company_info .heading_r,#contact .heading_r {
+  font-size : 30px;
+  margin-bottom : 70px;
+}
+#philosophy .heading_r::before {
+  content : 'Philosophy';
+}
+#philosophy h4 {
+  text-align : center;
+  font-size : 30px;
+}
+/*text*/
+#philosophy p {
+  font-size : 25px;
+  padding : 50px 70px;
+  line-height : 1.5;
+}
+#philosophy h4,#philosophy p {
+  color : #fff;
+}
+/* company_info */
+/*layout*/
+#company_info {
+  padding : 100px 0 130px;
+}
+/*heading*/
+#company_info .heading_r::before {
+  content : 'Company';
+}
+/*table layout*/
+.c_table {
+  width : 100%;
+  text-align : left;
+  table-layout : fixed;
+  border-collapse : collapse;
+}
+.c_table tr {
+  border-top : solid 1px #f8f8f8;
+  border-bottom : solid 1px #f8f8f8;;
+}
+.c_table th,.c_table td {
+  padding : 40px 0;
+}
+.c_table th {
+  font-size : 20px;
+  font-weight : normal;
+  width : 360px;
+  padding-left : 70px;
+}
+.c_table td {
+  width : 35%;
+}
+/* contact */
+/*heading*/
+#contact .heading_r::before {
+  content : 'Contact';
+}
+/*layout*/
+#contact {
+  padding : 60px 0 110px;
+}
+#contact .inner {
+  padding-left : 70px;
+  padding-right : 70px;
+}
+/*button*/
+.submit_btn {
+  -webkit-box-flex : 1;
+  flex : 1 1 auto;
+  padding : 10px 40px;
+  margin-left : 50%;
+  transform : translateX(-50%);
+  border : 1px solid #000;
+  text-align : center;
+  text-transform : uppercase;
+  position : relative;
+  overflow : hidden;
+  -webkit-transition : 1s;
+          transition : 1s;
+  border-radius : 30px;
+  background-color : #fff;
+  z-index : 1;
+}
+/*form layout*/
+.input,textarea {
+  border : 1px solid #707070;
+  width : 100%;
+  background-color : #fcfcfc;
+  padding-left : 1em;
+}
+textarea {
+  height : calc( 1.3em * 7 );
+  line-height : 1.3;
+  margin-bottom : 35px;
+}
+.input {
+  line-height : 1.3px;
+  height : 40px;
+  margin-top : 6px;
+  margin-bottom : 24px;
+}
+label {
+  font-size : 20px;
+}

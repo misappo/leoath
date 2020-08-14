@@ -21,15 +21,6 @@ Style Info:     リセットCSS
     line-height : 0;
     letter-spacing : 0;
   }  
-  body {
-    color : #000;
-    font-family : '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
-    font-size : 16px;
-    letter-spacing : 0;
-    background : #fff;
-    -moz-osx-font-smoothing : grayscale;
-    -webkit-font-smoothing : antialiased;
-  }
   img:not(.chart_img) {
     border : 0;
     font-size : 0;

@@ -1,0 +1,70 @@
+@charset 'utf-8';
+/* -----------------------------------------------------------
+CSS Information
+
+File name:      beauty.css
+Created:        2020-07
+Style Info:     ビューティCSS
+----------------------------------------------------------- */
+/* ------------------------------------ */
+/* heading */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* marker */
+/* ------------------------------------ */
+.marker_thin {
+  background : linear-gradient(transparent 70%,rgba(0,147,255,.5) 0);
+}
+/* ------------------------------------ */
+/* top visual */
+/* ------------------------------------ */
+#d_beauty {
+  position : relative;
+  padding : 155px 0 60px;
+}  
+.h_heading {
+  font-size : 70px;
+  font-weight : bold;
+  font-family : azo-sans-web, sans-serif;
+}
+.h_sub_text {
+  display : block;
+  margin-bottom : 67px;
+  font-size : 20px;
+  line-height : 1;
+  padding-right : 150px;
+  text-align : center;
+}
+.h_text {
+  margin-bottom : 20px;
+  white-space : nowrap;
+}
+.info_txt {
+  line-height : 2;
+}
+.h_container {
+  display : flex;
+  align-items : end;
+  justify-content : space-between;
+  min-height : 588px;
+}
+.h_box {
+  width : 30%;
+  padding-top : 150px;
+}
+.h_container::after {
+  content : '';
+  width : 750px;
+  height : 470px;
+  right : 48px;
+  top : 118px;
+  background : #f8f8f8;
+  border : #f8f8f8;
+  position : absolute;
+  z-index : -1;
+}
+.soon {
+  display : block;
+  text-align : right;
+}
+

@@ -6,7 +6,18 @@ File name:      common.css
 Created:        2020-07
 Style Info:     共有CSS
 ----------------------------------------------------------- */
-
+#about_us,#main,#service,#event,#solution,#news,#services,#casting,#web_ad,#web_production,#beauty,#d_casting,#influencer,#point,#register_info,#schedule,#d_contact,#web_business,#w_ad,#support,#w_point,#w_production,#w_schedule,#d_beauty,#company,#philosophy,#company_info,#contact,#header,#footer {
+  line-height : 1.3;
+}
+body {
+  color : #000;
+  font-family : '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+  font-size : 16px;
+  letter-spacing : 0;
+  background : #fff;
+  -moz-osx-font-smoothing : grayscale;
+  -webkit-font-smoothing : antialiased;
+} 
 /* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
@@ -15,9 +26,14 @@ h4 {
   font-weight : bold;
   line-height : 1.6;
 }
-/*.content_text p,#solution h5,.solution_item p,.h_heading,.heading_l,.heading_r,#footer h6,#footer p,.address,#footer span,.s_heading,#point .txt,#schedule,#d_contact,#register_info .r_text,.step span,.swiper-slide .s_heading,.swiper-slide .caption,.r_list li {
-  line-height : 1.3;
-}*/
+.sub_text {
+  display : inline-block;
+  width : 100%;
+  text-align : center;
+  font-weight : normal;
+  line-height : 1;
+  margin-bottom : 43px;
+}
 /* ------------------------------------ */
 /* layout */
 /* ------------------------------------ */
@@ -31,9 +47,6 @@ h4 {
 }
 .content_wrapper,.h_container {
   position : relative;
-}
-.fa,.fas {
-  font-weight : 900;
 }
 /* ------------------------------------ */
 /* header */
@@ -53,6 +66,9 @@ h4 {
   display : inline-block;
   position : relative;
 }
+.fa,.fas {
+  font-weight : 900;
+}
 .nav {
   background : rgba(255,255,255,.7);
   z-index : 999;
@@ -71,7 +87,7 @@ h4 {
 .logo span {
   font-size : 24px;
   font-family : azo-sans-web, sans-serif;
-  font-style : normal;
+  font-weight : bold;
 }
 .fa-angle-down {
   margin-left : 10px;
@@ -110,7 +126,7 @@ h4 {
   position : absolute;
   top : 30px;
   left : 50px;
-  background : rgba(266,244,244,.25);
+  background : rgba(226,224,224,.1);
   display : inline-block;
   transform : translateX(-50%);
   opacity : 0;
@@ -216,18 +232,6 @@ h4 {
 /* ------------------------------------ */
 /* stalker js animetion */
 /* ------------------------------------ */
-/*#stalker {
-  pointer-events : none;
-  position : fixed;
-  border-radius : 50%;
-  -webkit-transition : top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
-          transition : top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
-          transition : transform .2s, top, .5s, left .5s, width .5s, height .5s, background-color .5s;
-          transition : transform .2s, top, .5s, left .5s, width .5s, height .5s, background-color .5s, -webkit-transform .2s;
-  -webkit-transition-timing-function : ease-out;
-          transition-timing-function : ease-out;
-  z-index : 999;
-}*/
 #stalker {
   pointer-events : none;
   position : fixed;
@@ -253,4 +257,224 @@ h4 {
   -webkit-transition : .5s;
           transition : .5s;
   background : rgba(255, 255, 255, .5);
+}
+/* ------------------------------------ */
+/* animation */
+/* ------------------------------------ */
+@-webkit-keyframes slideInRight {
+  from {
+    opacity : 0;
+    -webkit-transform : translate3d(40%, 0, 0);
+            transform : translate3d(40%, 0, 0);
+  }
+  to {
+    opacity : 1;
+    -webkit-transform : translate3d(0, 0, 0);
+            transform : translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity : 0;
+    -webkit-transform : translate3d(-40%, 0, 0);
+            transform : translate3d(-40%, 0, 0);
+  }
+  to {
+    opacity : 1;
+    -webkit-transform : translate3d(0, 0, 0);
+            transform : translate3d(0, 0, 0);
+  }
+}
+.slideIn-right {
+  opacity : 0;
+}
+.inview-in .slideIn-right {
+  -webkit-animation-duration : 1.5s;
+          animation-duration : 1.5s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : slideInRight;
+          animation-name : slideInRight;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity : 0;
+    -webkit-transform : translate3d(0, 20px, 0);
+            transform : translate3d(0, 20px, 0);
+  }
+  to {
+    opacity : 1;
+    -webkit-transform : translate3d(0, 0, 0);
+            transform : translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity : 0;
+    -webkit-transform : translate3d(0, 20px, 0);
+            transform : translate3d(0, 20px, 0);
+  }
+  to {
+    opacity : 1;
+    -webkit-transform : translate3d(0, 0, 0);
+            transform : translate3d(0, 0, 0);
+  }
+}
+.fade-in {
+  opacity : 0;
+}
+.inview-in .fade-in {
+  -webkit-animation-duration : 3s;
+          animation-duration : 3s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : fadeIn;
+          animation-name : fadeIn;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
+.fade-in-stairs > * {
+  opacity : 0;
+}
+.inview-in .fade-in-stairs > * {
+  -webkit-animation-duration : 6s;
+          animation-duration : 6s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : fadeIn;
+          animation-name : fadeIn;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
+.inview-in .fade-in-stairs > *:nth-child(2) {
+  animation-delay : 1s;
+}
+.inview-in .fade-in-stairs > *:nth-child(3) {
+  animation-delay : 1.6s;
+}
+.inview-in .fade-in-stairs > *:nth-child(4) {
+  animation-delay : 2.4s;
+}
+.inview-in .fade-in-stairs > *:nth-child(5) {
+  animation-delay : 3s;
+}
+.inview-in .fade-in-stairs > *:nth-child(6) {
+  animation-delay : 3.6s;
+}
+.inview-in .fade-in-stairs > *:nth-child(7) {
+  animation-delay : 4.2s;
+}
+.inview-in .fade-in-stairs > *:nth-child(8) {
+  animation-delay : 4.8s;
+}
+.inview-in .fade-in-stairs > *:nth-child(9) {
+  animation-delay : 5.4s;
+}
+.inview-in .fade-in-stairs > *:nth-child(10) {
+  animation-delay : 6s;
+}
+.inview-in .fade-in-stairs > *:nth-child(11) {
+  animation-delay : 6.6s;
+}
+.fade-in-s > * {
+  opacity : 0;
+}
+.inview-in .fade-in-s > * {
+  -webkit-animation-duration : 2.4s;
+          animation-duration : 2.4s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : fadeIn;
+          animation-name : fadeIn;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
+.inview-in .fade-in-s > *:nth-child(2) {
+  animation-delay : .4s;
+  width : 48px;
+  position : absolute;
+  left : 280px;
+  top : 50%;
+  z-index : 2;
+}
+.inview-in .fade-in-s > *:nth-child(3) {
+  animation-delay : .8s;
+}
+.inview-in .fade-in-s > *:nth-child(4) {
+  animation-delay : 1.2s;
+  width : 48px;
+  position : absolute;
+  left : 597px;
+  top : 50%;
+  z-index : 2;
+}
+.inview-in .fade-in-s > *:nth-child(5) {
+  animation-delay : 1.6s;
+}
+.inview-in .fade-in-s > *:nth-child(6) {
+  animation-delay : 2s;
+  width : 48px;
+  position : absolute;
+  left : 910px;
+  top : 50%;
+  z-index : 2;
+}
+.inview-in .fade-in-s > *:nth-child(7) {
+  animation-delay : 2.4s;
+}
+.delay-02 {
+  animation-delay : .8s;
+}
+.delay-04 {
+  animation-delay : 1.2s;
+}
+.delay-06 {
+  animation-delay : 1.8s;
+}
+.delay-08 {
+  animation-delay : 2.2s;
+}
+.delay-10 {
+  animation-delay : 2.6s;
+}
+.delay-12 {
+  animation-delay : 3s;
+}
+.delay-14 {
+  animation-delay : 3.4s;
+}
+.delay-16 {
+  animation-delay : 3.8s;
+}
+.delay-18 {
+  animation-delay : 4.2s;
+}
+.delay-20 {
+  animation-delay : 4.8s;
+}
+@-webkit-keyframes opacityIn {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+@keyframes opacityIn {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+.opacity-in {
+  opacity : 0;
+}
+.inview-in .opacity-in {
+  -webkit-animation-duration : 2s;
+          animation-duration : 2s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : opacityIn;
+          animation-name : opacityIn;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
 }
