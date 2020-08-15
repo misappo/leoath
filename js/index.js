@@ -21,7 +21,8 @@ var mySwiper = new Swiper('.swiper-container', {
         dragSize: 500,
     },
     effect: 'coverflow',
-    slidesPerView: 2,
+    slidesPerView: 'auto',
+    loopedSlides: '3',
     centeredSlides: true,
     loop: true,
     coverflowEffect: {

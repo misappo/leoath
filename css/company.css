@@ -10,20 +10,17 @@ Style Info:     カンパニーCSS
 /* heading */
 /* ------------------------------------ */
 .heading_r {
-  position : relative;
-  text-align : center;
-  font-weight : bold;
+  font-size : 30px;
+  margin-bottom : 70px;
 }
-.heading_r::before {
-  position : absolute;
-  right : 0;
-  transform : translateY(-50%);
-  font-size : 120px;
-  font-weight : bold;
-  font-family : azo-sans-web, sans-serif;
-  color : #f8f8f8;
-  border : #f8f8f8;
-  z-index : -1;
+#philosophy .heading_r::before {
+  content : 'Philosophy';
+}
+#company_info .heading_r::before {
+  content : 'Company';
+}
+#contact .heading_r::before {
+  content : 'Contact';
 }
 /* ------------------------------------ */
 /* top visual */
@@ -106,14 +103,6 @@ Style Info:     カンパニーCSS
   width : 100%;
   background : #2e75b6;
 }
-/*heading*/
-#philosophy .heading_r,#company_info .heading_r,#contact .heading_r {
-  font-size : 30px;
-  margin-bottom : 70px;
-}
-#philosophy .heading_r::before {
-  content : 'Philosophy';
-}
 #philosophy h4 {
   text-align : center;
   font-size : 30px;
@@ -131,10 +120,6 @@ Style Info:     カンパニーCSS
 /*layout*/
 #company_info {
   padding : 100px 0 130px;
-}
-/*heading*/
-#company_info .heading_r::before {
-  content : 'Company';
 }
 /*table layout*/
 .c_table {
@@ -160,10 +145,6 @@ Style Info:     カンパニーCSS
   width : 35%;
 }
 /* contact */
-/*heading*/
-#contact .heading_r::before {
-  content : 'Contact';
-}
 /*layout*/
 #contact {
   padding : 60px 0 110px;

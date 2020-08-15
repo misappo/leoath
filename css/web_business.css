@@ -9,43 +9,27 @@ Style Info:     ウェブビジネスCSS
 /* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
-.heading_l {
-  position : relative;
-  text-align : center;
-  font-weight : bold;
-  font-size : 35px;
-  margin-bottom : 40px;
-}
-.heading_l::before {
-  position : absolute;
-  left : 0;
-  transform : translateY(-50%);
-  font-size : 120px;
-  font-weight : bold;
-  font-family : azo-sans-web, sans-serif;
-  color : #f8f8f8;
-  border : #f8f8f8;
-}
-.heading_r {
-  position : relative;
-  text-align : center;
-  font-weight : bold;
-  margin-bottom : 40px;
-  font-size : 35px;
-}
-.heading_r::before {
-  position : absolute;
-  right : 0;
-  transform : translateY(-50%);
-  font-size : 120px;
-  font-weight : bold;
-  font-family : azo-sans-web, sans-serif;
-  color : #f8f8f8;
-  border : #f8f8f8;
-  z-index : -1;
-}
 .sub_l {
   font-size : 20px;
+}
+#w_ad .heading_r,#w_production .heading_r {
+  margin-bottom : 35px;
+}
+.heading_l {
+  font-family : azo-sans-web, sans-serif;
+  font-size : 45px;
+}
+#w_ad .heading_r::before {
+  content : 'Web Ad';
+}
+#w_point .heading_l::before {
+  content : 'Point';
+}
+#w_production .heading_r::before {
+  content : 'Production';
+}
+#w_schedule .heading_l::before {
+  content : 'Schedule';
 }
 /* ------------------------------------ */
 /* marker */
@@ -86,49 +70,6 @@ Style Info:     ウェブビジネスCSS
 /* ------------------------------------ */
 /* button */
 /* ------------------------------------ */
-.link_btn {
-  display : inline-block;
-  -webkit-box-flex : 1;
-  flex : 1 1 auto;
-  padding : 10px 20px;
-  border : 1px solid #000;
-  text-align : center;
-  text-transform : uppercase;
-  position : relative;
-  overflow : hidden;
-  -webkit-transition : 1s;
-          transition : 1s;
-  border-radius : 30px;
-  background-color : rgba(0, 0, 0, 0);
-  z-index : 1;
-  font-size : 14px;
-  font-family : azo-sans-web, sans-serif;
-  line-height : 1.2;
-}
-.link_btn::after {
-  position : absolute;
-  -webkit-transition : 1s;
-          transition : 1s;
-  content : '';
-  width : 0;
-  left : 50%;
-  bottom : -5px;
-  height : 3px;
-  background : #000;
-  height : 120%;
-  left : -10%;
-  -webkit-transform : skewX(15deg);
-          transform : skewX(15deg);
-  z-index : -1;
-}
-.link_btn:hover {
-  cursor : pointer;
-  color : white;
-}
-.link_btn:hover:after {
-  left : -10%;
-  width : 120%;
-}
 .btn {
   text-align : center;
 }  
@@ -186,15 +127,6 @@ Style Info:     ウェブビジネスCSS
 /* -------------------------------------------- */
 /* w_ad,support,w_point,w_production,w_schedule */
 /* -------------------------------------------- */
-/*heading*/
-#w_ad .heading_r,#w_production .heading_r {
-  font-family : azo-sans-web, sans-serif;
-  font-size : 35px;
-  margin-bottom : 35px;
-}
-#w_ad .heading_r::before {
-  content : 'Web Ad';
-}
 /*layout*/
 #w_ad {
   padding : 125px 0 90px;
@@ -433,9 +365,6 @@ Style Info:     ウェブビジネスCSS
   font-size : 45px;
   font-family : azo-sans-web, sans-serif;
 }
-#w_point .heading_l::before {
-  content : 'Point';
-}
 /*layout*/
 #w_point,#w_production,#w_schedule {
   padding : 125px 0 60px;
@@ -477,16 +406,8 @@ Style Info:     ウェブビジネスCSS
   list-style-position : outside;
   margin-left : 20px;
 }
-/* w_production */
-/*heading*/
-#w_production .heading_r::before {
-  content : 'Production';
-}
 /* w_schedule */
 /*heading*/
-#w_schedule .heading_l::before {
-  content : 'Schedule';
-}
 #w_schedule .sec_box .txt {
   font-size : 14px;
 }

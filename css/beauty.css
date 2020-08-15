@@ -9,6 +9,16 @@ Style Info:     ビューティCSS
 /* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
+.heading_r,.heading_l {
+  margin-bottom : 35px;
+}
+#machine .heading_r::before {
+  content : 'Machine';
+}
+#cosmetics .heading_l::before {
+  content : 'Cosmetics';
+  z-index : -1;
+}
 /* ------------------------------------ */
 /* marker */
 /* ------------------------------------ */
@@ -67,4 +77,132 @@ Style Info:     ビューティCSS
   display : block;
   text-align : right;
 }
-
+/* -------------------------------------------- */
+/* machine,cosmetics */
+/* -------------------------------------------- */
+.container {
+  position : relative;
+}
+.machine_list {
+  display : flex;
+  flex-wrap : wrap;
+}
+.m_contents {
+  width : 690px;
+}
+.m_heading {
+  right : 0;
+  width : 470px;
+  position : absolute;
+  top : 0;
+}
+.m_heading h4 {
+  margin-bottom : 30px;
+}
+.m_heading p {
+  line-height : 2;
+  margin-bottom : 30px;
+}
+.item {
+  float : left;
+  width : 370px;
+  margin-bottom : 70px;
+}
+.item:nth-child(odd) {
+  width : 40%;
+}
+.item:nth-child(even) {
+  padding-top : 35px;
+}
+.item:not(:nth-of-type(2)) .desc {
+  font-family : azo-sans-web, sans-serif;
+}
+.desc {
+  font-size : 25px;
+  font-weight : bold;
+  margin-bottom : 24px;
+}
+.item .txt {
+  line-height : 2;
+}
+.swiper-container {
+  height : 630px;
+  padding-bottom : 30px;
+}
+.swiper-slide {
+  background-position : center;
+  background-repeat : no-repeat;
+  width : 428px;
+}
+.s_heading {
+  opacity : 0;
+}
+.swiper-slide-active .s_heading {
+  position : absolute;
+  bottom : 10px;
+  left : 55%;
+  width : 230px;
+  opacity : 1;
+  transition : all .2s ease-in .3s;
+}
+.swiper-slide-active .s_heading p {
+  line-height : 2;
+}
+.slide1 {
+  background-image : url(../img/cosmetic_1.png);
+}
+.slide2 {
+  background-image : url(../img/cosmetic_2.png);
+}
+.slide3 {
+  background-image : url(../img/cosmetic_3.png);
+}
+.slide4 {
+  background-image : url(../img/cosmetic_4.jpg);
+}  
+.swiper-pagination-bullet {
+  background : transparent;
+  border : solid 1px #707070;
+}
+.swiper-pagination-bullet-active {
+  background : #2e75b6;
+  border : solid 1px #2e75b6;
+}
+.desc_marker:nth-of-type(1) {
+  margin-bottom : 4px;
+}
+.desc_marker {
+  display : inline-block;
+  background : #2e75b6;
+  color : #fff;
+  font-family : azo-sans-web, sans-serif;
+  font-size : 20px;
+  font-weight : bold;
+  padding : 2px 6px;
+  margin-bottom : 14px;
+}
+.s_btn {
+  position : absolute;
+  bottom : 60px;
+  right : 5%;
+  display : flex;
+  justify-content : space-between;
+  width : 183px;
+}
+.btn_prev,.btn_next {
+  cursor : pointer;
+  background : no-repeat;
+  width : 80px;
+  height : 80px;
+  z-index : 1;
+}
+.btn_prev {
+  background : url(../img/c_prev.png);
+  left : 10px ;
+  right : auto;
+}
+.btn_next {
+  background : url(../img/c_next.png);
+  right : 10px;
+  left : auto;
+}  

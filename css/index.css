@@ -7,16 +7,6 @@ Created:        2020-07
 Style Info:     インデックスCSS
 ----------------------------------------------------------- */
 /* ------------------------------------ */
-/* marker */
-/* ------------------------------------ */
-.marker_thin {
-  background : linear-gradient(transparent 70%,rgba(0,147,255,.5) 0);
-}
-.color_1 {
-  color : #3162e6;
-  line-height : 0;
-}
-/* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
 #service h4 {
@@ -30,68 +20,35 @@ h4 {
   margin-bottom : 34px;
 }
 .heading_l {
-  position : relative;
-  text-align : center;
-  font-weight : bold;
   font-family : azo-sans-web, sans-serif;
   font-size : 45px;
   line-height : 1.2;
 }
-.heading_l::before {
-  position : absolute;
-  left : 0;
-  transform : translateY(-50%);
-  font-size : 120px;
-  font-weight : bold;
-  font-family : azo-sans-web, sans-serif;
-  color : #f8f8f8;
-  border : #f8f8f8;
-}
-/* ------------------------------------ */
-/* button */
-/* ------------------------------------ */
-.link_btn {
-  display : inline-block;
-  -webkit-box-flex : 1;
-  flex : 1 1 auto;
-  padding : 10px 20px;
-  border : 1px solid #000;
-  text-align : center;
-  text-transform : uppercase;
-  position : relative;
-  overflow : hidden;
-  -webkit-transition : 1s;
-          transition : 1s;
-  border-radius : 30px;
-  background-color : rgba(0, 0, 0, 0);
-  z-index : 1;
-  font-size : 14px;
-  font-family : azo-sans-web, sans-serif;
-  line-height : 1.2;
-}
-.link_btn::after {
-  position : absolute;
-  -webkit-transition : 1s;
-          transition : 1s;
-  content : '';
-  width : 0;
-  left : 50%;
-  bottom : -5px;
-  height : 3px;
-  background : #000;
-  height : 120%;
-  left : -10%;
-  -webkit-transform : skewX(15deg);
-          transform : skewX(15deg);
+#about_us .heading_l::before {
+  content : 'About Us';
   z-index : -1;
+} 
+#service .heading_l::before {
+  content : 'Service';
+}  
+#event .heading_l::before {
+  content : 'Event';
+}  
+#news .heading_l::before {
+  content : 'News';
+}  
+#solution .heading_l::before {
+  content : 'Solution';
+}  
+/* ------------------------------------ */
+/* marker */
+/* ------------------------------------ */
+.marker_thin {
+  background : linear-gradient(transparent 70%,rgba(0,147,255,.5) 0);
 }
-.link_btn:hover {
-  cursor : pointer;
-  color : white;
-}
-.link_btn:hover:after {
-  left : -10%;
-  width : 120%;
+.color_1 {
+  color : #3162e6;
+  line-height : 0;
 }
 /* ------------------------------------ */
 /* mainvisual */
@@ -114,9 +71,9 @@ h4 {
   margin : 0 auto;
 }
 /* ------------------------------------ */
-/* about_us,event,service */
+/* about_us,service,event,news,solution */
 /* ------------------------------------ */    
-/*common layout*/
+/*layout*/
 .bg1 {
   width : 907px;
   height : 340px;
@@ -144,10 +101,6 @@ h4 {
   left : 670px;
 }
 /*about_us*/
-#about_us .heading_l::before {
-  content : 'About Us';
-  z-index : -1;
-}  
 #about_us p {
   line-height : 2;
 }
@@ -161,9 +114,6 @@ h4 {
   font-size : 20px;
 }  
 /* service */
-#service .heading_l::before {
-  content : 'Service';
-}  
 #service .content_wrapper {
   display : flex;
 }
@@ -177,6 +127,7 @@ h4 {
 .swiper-slide {
   background-position : center;
   background-repeat : no-repeat;
+  width : 407px;
 }
 .slide1 {
   background-image : url(../img/casting.jpg);
@@ -256,9 +207,6 @@ h4 {
   display : none;
 }
 /* event */
-#event .heading_l::before {
-  content : 'Event';
-}  
 #event .content_text {
   top : 185px;
 }
@@ -278,9 +226,6 @@ h4 {
   font-family : azo-sans-web, sans-serif;
 }
 /* solution */
-#solution .heading_l::before {
-  content : 'Solution';
-}  
 #solution {
   width : 100%;
   background : linear-gradient(#fff 52%, #2e75b6 40%);
@@ -322,12 +267,6 @@ h4 {
   padding-left : 60px;
   padding-right : 60px;
 }
-/* ------------------------------------ */
-/* news */
-/* ------------------------------------ */
-#news .heading_l::before {
-  content : 'News';
-}  
 /* ------------------------------------ */
 /* particles js */
 /* ------------------------------------ */
