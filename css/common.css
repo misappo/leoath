@@ -6,7 +6,7 @@ File name:      common.css
 Created:        2020-07
 Style Info:     共有CSS
 ----------------------------------------------------------- */
-#about_us,#main,#service,#event,#solution,#news,#services,#casting,#web_ad,#web_production,#beauty,#d_casting,#influencer,#point,#register_info,#schedule,#d_contact,#machine,#cosmetics,#web_business,#w_ad,#support,#w_point,#w_production,#w_schedule,#d_beauty,#company,#philosophy,#company_info,#contact,#header,#footer {
+#about_us,#main,#service,#event,#solution,#news,#services,#casting,#web_ad,#web_production,#beauty,#d_casting,#influencer,#point,#register_info,#schedule,#d_contact,#machine,#cosmetics,#media,#web_business,#w_ad,#support,#w_point,#w_production,#w_schedule,#d_beauty,#company,#philosophy,#company_info,#contact,#header,#footer {
   line-height : 1.3;
 }
 body {

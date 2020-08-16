@@ -19,6 +19,9 @@ Style Info:     ビューティCSS
   content : 'Cosmetics';
   z-index : -1;
 }
+#media .heading_r::before {
+  content : 'Media';
+}
 /* ------------------------------------ */
 /* marker */
 /* ------------------------------------ */
@@ -78,9 +81,13 @@ Style Info:     ビューティCSS
   text-align : right;
 }
 /* -------------------------------------------- */
-/* machine,cosmetics */
+/* machine,cosmetics,media */
 /* -------------------------------------------- */
+#machine,#cosmetics,#media {
+  padding : 110px 0 80px;
+}
 .container {
+  margin-top : 75px;
   position : relative;
 }
 .machine_list {
@@ -93,6 +100,7 @@ Style Info:     ビューティCSS
 .m_heading {
   right : 0;
   width : 470px;
+  height : 320px;
   position : absolute;
   top : 0;
 }
@@ -106,6 +114,8 @@ Style Info:     ビューティCSS
 .item {
   float : left;
   width : 370px;
+}
+.item:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
   margin-bottom : 70px;
 }
 .item:nth-child(odd) {
@@ -126,24 +136,24 @@ Style Info:     ビューティCSS
   line-height : 2;
 }
 .swiper-container {
-  height : 630px;
-  padding-bottom : 30px;
+  height : 500px;
 }
 .swiper-slide {
   background-position : center;
   background-repeat : no-repeat;
   width : 428px;
+  height : 420px;
 }
 .s_heading {
   opacity : 0;
 }
 .swiper-slide-active .s_heading {
   position : absolute;
-  bottom : 10px;
+  bottom : 0;
   left : 55%;
   width : 230px;
   opacity : 1;
-  transition : all .2s ease-in .3s;
+  transition : all .1s ease-in .3s;
 }
 .swiper-slide-active .s_heading p {
   line-height : 2;
@@ -183,7 +193,7 @@ Style Info:     ビューティCSS
 }
 .s_btn {
   position : absolute;
-  bottom : 60px;
+  bottom : 30px;
   right : 5%;
   display : flex;
   justify-content : space-between;
@@ -206,3 +216,51 @@ Style Info:     ビューティCSS
   right : 10px;
   left : auto;
 }  
+#media .content_wrapper {
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+}
+.img_list {
+  display : flex;
+}
+#media .content_text {
+  width : 367px;
+}
+#media .content_text p {
+  line-height : 2;
+  margin-bottom : 35px;
+}
+#media .content_text h4 {
+  margin-bottom : 35px;
+}
+.arrow::before {
+  content : '';
+  display : block;
+  width : 18px;
+  height : 1px;
+  background-color : black;
+  position : absolute;
+  left : 75%;
+  top : 50%;
+  transform : translate(25%, -50%);
+  transition : 1s;
+}
+.arrow::after {
+  content : '';
+  display : block;
+  width : 10px;
+  height : 1px;
+  background-color : black;
+  position : absolute;
+  left : 77.5%;
+  top : 50%;
+  transform : translate(100%, -4px) rotate(45deg);
+  transition : 1s;
+}
+.link_btn:hover .arrow::after,.link_btn:hover .arrow::before {
+  background-color : white;
+}
+#media .link_btn {
+  padding : 10px 60px;
+}
