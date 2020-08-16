@@ -1,4 +1,4 @@
-@charset 'utf-8';
+﻿@charset 'utf-8';
 /* -----------------------------------------------------------
 CSS Information
 
@@ -384,3 +384,6 @@ h4 {
   font-weight : bold;
 }
 
+.active-slide {
+    cursor: pointer;
+}

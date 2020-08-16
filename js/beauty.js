@@ -1,3 +1,15 @@
+//swiper button
+$('.btn_prev').on('click', function () {
+    $('.swiper-button-prev').click()
+    return false;
+});
+
+$('.btn_next').on('click', function () {
+    $('.swiper-button-next').click()
+    return false;
+});
+
+
 var mySwiper = new Swiper('.swiper-container', {
     autoplay: {
         delay: 3900,

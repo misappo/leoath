@@ -39,6 +39,7 @@ var mySwiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    slideActiveClass: "active-slide",
 })
 
 //particles-js variable
@@ -117,3 +118,8 @@ function upateLoadingImage(current) {
          }
      }
  }
+
+$(document).on("click", '.active-slide', function () {
+    var href = $(this).attr("data-href");
+    window.location.href = href;
+});
