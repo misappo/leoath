@@ -73,13 +73,14 @@ Style Info:     カンパニーCSS
   position : absolute;
   top : 350px;
 }
-/*.slogan {
-  font-size : 70px;
-}*/
+.slogan img {
+  width : 455px;
+}
 .h_name {
   font-size : 20px;
   font-weight : bold;
-  text-align : center;
+  text-align : right;
+  padding-right : 20px;
 }
 .h_name::before,.h_name::after {
   content : '';
@@ -98,7 +99,7 @@ Style Info:     カンパニーCSS
   padding-top : 100px;
 }
 .container {
-  padding : 60px 0 45px 0;
+  padding : 45px 0 25px 0;
   margin-bottom : 60px;
   width : 100%;
   background : #2e75b6;
@@ -112,6 +113,7 @@ Style Info:     カンパニーCSS
   font-size : 25px;
   padding : 50px 70px;
   line-height : 1.5;
+  text-align : center;
 }
 #philosophy h4,#philosophy p {
   color : #fff;
@@ -138,11 +140,12 @@ Style Info:     カンパニーCSS
 .c_table th {
   font-size : 20px;
   font-weight : normal;
-  width : 360px;
+  width : 20%;
   padding-left : 70px;
 }
 .c_table td {
-  width : 35%;
+  padding-right : 265px;
+  text-align : center;
 }
 /* contact */
 /*layout*/

@@ -8,11 +8,11 @@ $('.btn_next').on('click', function () {
     $('.swiper-button-next').click()
     return false;
 });
-
-
+//swiper
 var mySwiper = new Swiper('.swiper-container', {
     autoplay: {
-        delay: 3900,
+        delay: 5500,
+        disableOnInteraction: true,
     },
     effect: 'coverflow',
     slidesPerView: 'auto',
@@ -34,13 +34,17 @@ var mySwiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    loop: true,
-    speed: 420,
-    centeredSlides: true,
-    slideToClickedSlide: true,
+    speed: 600,
     spaceBetween: 230,
 },
     false);
+$(".swiper-container").hover(function () {
+    (this).swiper.autoplay.stop();
+}, function () {
+    (this).swiper.autoplay.start();
+});
+
+//side nav fixed
 $(function ($) {
     var content = $(".m_contents");
     var sidebar = $(".m_heading");
@@ -66,7 +70,7 @@ $(function ($) {
                 'top': 76,
                 'width': sidebar.width()
             });
-        } else if (scrollTop >= content_bottom - sticked_height -76) {
+        } else if (scrollTop >= content_bottom - sticked_height - 76) {
             // 現在位置がメインコンテンツ最後尾より下なら、メインコンテンツ最後尾にサイドバーを位置させる
             sticked.css({
                 'position': 'absolute',

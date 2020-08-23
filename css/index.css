@@ -9,11 +9,8 @@ Style Info:     インデックスCSS
 /* ------------------------------------ */
 /* heading */
 /* ------------------------------------ */
-#service h4 {
-  margin-bottom : 34px;
-}
 h4 {
-  margin-bottom : 68px;
+  margin-bottom : 34px;
   letter-spacing : 2px;
 }
 #service h4 {
@@ -55,7 +52,7 @@ h4 {
 /* ------------------------------------ */
 #main {
   height : 820px;
-  background : transparent url(../img/beach-2x.jpg) no-repeat bottom/cover;
+  background : transparent url(../img/home/beach-2x.jpg) no-repeat bottom/cover;
 }
 .main_heading {
   padding-top : 297px;
@@ -88,6 +85,9 @@ h4 {
   padding : 90px 0 55px;
   position : relative;
 }
+#news {
+  height : 460px;
+}
 #about_us .content_text,#event .content_text {
   width : 477px;
   height : 440px;
@@ -100,7 +100,7 @@ h4 {
 #about_us .inview-in .content_text,#event .inview-in .content_text {
   left : 670px;
 }
-/*about_us*/
+/* about_us */
 #about_us p {
   line-height : 2;
 }
@@ -121,6 +121,7 @@ h4 {
   margin-bottom : 60px;
   line-height : 1.8;
 }
+/*slider*/
 .swiper-container {
   box-sizing : content-box;
 }
@@ -130,16 +131,16 @@ h4 {
   width : 407px;
 }
 .slide1 {
-  background-image : url(../img/casting.jpg);
+  background-image : url(../img/home//casting.jpg);
 }
 .slide2 {
-  background-image : url(../img/beauty_products.jpg);
+  background-image : url(../img/home/beauty_products.jpg);
 }
 .slide3 {
-  background-image : url(../img/web_production.jpg);
+  background-image : url(../img/home/web_production.jpg);
 }
 .slide4 {
-  background-image : url(../img/web_advertisement.jpg);
+  background-image : url(../img/home/web_advertisement.jpg);
 }  
 .swiper-slide .s_heading {
   font-family : azo-sans-web, sans-serif;
@@ -152,9 +153,16 @@ h4 {
   padding-top : 340px;
   color : #fff;
 }
-.swiper-slide-active .s_heading,.swiper-slide-active .caption {
+.active-slide .s_heading,.active-slide .caption {
   opacity : 1;
   transition : ease-in 1s;
+}
+.active-slide:hover {
+  filter : brightness(110%);
+  transition : ease-in-out 3s;
+}
+.active-slide {
+  cursor : pointer;
 }
 .swiper_bg {
   background : #2e75b6;
@@ -167,7 +175,7 @@ h4 {
   width : 480px;
   padding : 55px 75px 0;
 }
-/*button*/
+/*slider button*/
 .s_btn {
   position : absolute;
   bottom : 60px;
@@ -184,16 +192,19 @@ h4 {
   z-index : 1;
 }
 .btn_prev {
-  background : url(../img/btn-prev.png);
+  background : url(../img/home/btn-prev.png);
   left : 10px ;
   right : auto;
 }
 .btn_next {
-  background : url(../img/btn-next.png);
+  background : url(../img/home/btn-next.png);
   right : 10px;
   left : auto;
 }  
-/*swiper scrollbar*/
+.swiper-button-next,.swiper-button-prev {
+  display : none;
+}
+/*slider scrollbar*/
 .swiper-container-horizontal > .swiper-scrollbar {
   width : 80px;
   height : 4px;
@@ -202,9 +213,6 @@ h4 {
 }
 .swiper-scrollbar-drag {
   background : #fff;
-}
-.swiper-button-next,.swiper-button-prev {
-  display : none;
 }
 /* event */
 #event .content_text {
@@ -382,8 +390,4 @@ h4 {
   left : 425px;
   font-size : 58px;
   font-weight : bold;
-}
-
-.active-slide {
-    cursor: pointer;
 }

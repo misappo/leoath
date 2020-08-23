@@ -8,11 +8,15 @@ $('.btn_next').on('click', function () {
     $('.swiper-button-next').click()
     return false;
 });
-
+$(document).on("click", '.active-slide', function () {
+    var href = $(this).attr("data-href");
+    window.location.href = href;
+});
 //swiper js
 var mySwiper = new Swiper('.swiper-container', {
     autoplay: {
         delay: 3000,
+        disableOnInteraction: false,
     },
     scrollbar: {
         el: '.swiper-scrollbar',
@@ -29,11 +33,7 @@ var mySwiper = new Swiper('.swiper-container', {
         rotate: 0,
         slideShadows: false,
         stretch: 0,
-        modifier: 5,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+        modifier: 4,
     },
     navigation: {
         nextEl: '.swiper-button-next',
@@ -41,36 +41,41 @@ var mySwiper = new Swiper('.swiper-container', {
     },
     slideActiveClass: "active-slide",
 })
+$(".swiper-container").hover(function () {
+    (this).swiper.autoplay.stop();
+}, function () {
+    (this).swiper.autoplay.start();
+});
 
 //particles-js variable
 window.onresize =//<- resize時も対応
-window.onload = function () {
-    var cnv = document.getElementsByClassName('particles-js-canvas-el')[0];
-    if (!cnv) {
-        return false;
-    }
-    var ctx = cnv.getContext('2d');
-    cnv.setAttribute('width', cnv.clientWidth);  //<- sizeを教えてあげる
-    cnv.setAttribute('height', cnv.clientHeight);//<- sizeを教えてあげる
-
-    var p = false;
-    cnv.addEventListener('mousemove', (e) => {
-        console.log(e.which, cnv);
-        if (e.which == 1) {
-            if (!p) {
-                ctx.beginPath();
-                ctx.strokeStyle = "#fff";
-                ctx.moveTo(e.x, e.y);
-                p = true;
-            } else {
-                ctx.lineTo(e.x, e.y);
-                ctx.stroke();
-            }
-        } else {
-            p = false;
+    window.onload = function () {
+        var cnv = document.getElementsByClassName('particles-js-canvas-el')[0];
+        if (!cnv) {
+            return false;
         }
-    });
-};    
+        var ctx = cnv.getContext('2d');
+        cnv.setAttribute('width', cnv.clientWidth);  //<- sizeを教えてあげる
+        cnv.setAttribute('height', cnv.clientHeight);//<- sizeを教えてあげる
+
+        var p = false;
+        cnv.addEventListener('mousemove', (e) => {
+            console.log(e.which, cnv);
+            if (e.which == 1) {
+                if (!p) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = "#fff";
+                    ctx.moveTo(e.x, e.y);
+                    p = true;
+                } else {
+                    ctx.lineTo(e.x, e.y);
+                    ctx.stroke();
+                }
+            } else {
+                p = false;
+            }
+        });
+    };
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', './lib/particles.json', function () {
@@ -86,40 +91,35 @@ function upateLoadingImage(current) {
     var width = maxWidthPar * progress;
     $('.header .title .title2 .char1').css("width", width + "%");
     $('.progress-label').attr("data-progress-text", Math.round(current) + "%");
-    $('.progress-label').text( Math.round(current) + "%");
+    $('.progress-label').text(Math.round(current) + "%");
 }
 
- function imagesProgress () {
+function imagesProgress() {
 
-     var $container    = $('#progress'),
-         imgLoad       = imagesLoaded('body'),
-         imgTotal      = imgLoad.images.length,
-         imgLoaded     = 0,
-         current       = 0,
-         progressTimer = setInterval(updateProgress, 1000 / 60);
+    var $container = $('#progress'),
+        imgLoad = imagesLoaded('body'),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        current = 0,
+        progressTimer = setInterval(updateProgress, 1000 / 60);
 
-     imgLoad.on('progress', function () {
-         imgLoaded++;
-     });
+    imgLoad.on('progress', function () {
+        imgLoaded++;
+    });
 
-     function updateProgress () {
-         var target = (imgLoaded / imgTotal) * 100;
-         current += (target - current) * 0.1;
-         upateLoadingImage(current);
+    function updateProgress() {
+        var target = (imgLoaded / imgTotal) * 100;
+        current += (target - current) * 0.1;
+        upateLoadingImage(current);
 
-         if(current >= 100){
-             clearInterval(progressTimer);
-             $container.animate({ left: '100%' }, 1000);
-             setTimeout(function () { $container.remove(); }, 1000);
-         }
+        if (current >= 100) {
+            clearInterval(progressTimer);
+            $container.animate({ left: '100%' }, 1000);
+            setTimeout(function () { $container.remove(); }, 1000);
+        }
 
-         if (current > 99.9) {
-             current = 100;
-         }
-     }
- }
-
-$(document).on("click", '.active-slide', function () {
-    var href = $(this).attr("data-href");
-    window.location.href = href;
-});
+        if (current > 99.9) {
+            current = 100;
+        }
+    }
+}

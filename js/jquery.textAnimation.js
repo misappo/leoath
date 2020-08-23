@@ -98,7 +98,7 @@
 
 			//CSS初期設定
 			$(this).css({
-				opacity: 1
+				opacity: 1,
 			});
 
 			//一文字ずつのCSS初期設定
@@ -144,7 +144,7 @@
 				//delayに合わせてCSSを初期状態に戻す
 				setTimeout(function () {
 					$character.eq(i).css({
-						backgroundColor: '#2e75b6',
+						backgroundColor: 'transpearent',
 						transform: 'scale(' + 1 + ')',
 						letterSpacing: defaultCss.letterSpacing,
 						opacity: 1,

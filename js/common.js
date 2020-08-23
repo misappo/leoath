@@ -7,6 +7,7 @@ $('.animate').on('inview', function(event, isInView) {
     $(this).addClass('inview-in');
 });
 
+//stalker js
 //マウスストーカー用のdivを取得
 const stalker = document.getElementById('stalker');
 

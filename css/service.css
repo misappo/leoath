@@ -88,7 +88,6 @@ Style Info:     サービスCSS
 /* ------------------------------------ */
 h4 {
   margin-bottom : 40px;
-  white-space : pre;
   display : inline-block;
   text-align : left;
 }
@@ -96,7 +95,7 @@ h4 {
   height : calc( 2.4em * 5 );
   display : inline-block;
   text-align : left;
-  line-height : 1.8;
+  line-height : 1.7;
 }
 /*button*/
 .btn {
@@ -129,7 +128,7 @@ h4 {
   height : 440px;
   position : absolute;
   background : #fff;
-  padding : 48px 60px 10px 45px;
+  padding : 48px 50px 10px 30px;
   box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
   text-align : center;
 }

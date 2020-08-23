@@ -44,28 +44,10 @@ Style Info:     ウェブビジネスCSS
   display : inline-block;
   background : #2e75b6;
   color : #fff;
-  padding : 5px 14px;
+  padding : 7px 14px;
 }
 .marker_line:not(:last-child) {
   margin-bottom : 5px;
-}
-.textAnimation,.textAnimation-delay {
-  display : inline-block;
-  opacity : 0;
-  color : #fff;
-  margin-bottom : 5px;
-}
-.textAnimation span:first-child {
-  padding-left : 14px;
-}
-.textAnimation span:last-child {
-  padding-right : 14px;
-}
-.textAnimation-delay span:first-child {
-  padding-left : 14px;
-}
-.textAnimation-delay span:last-child {
-  padding-right : 14px;
 }
 /* ------------------------------------ */
 /* button */
@@ -127,6 +109,7 @@ Style Info:     ウェブビジネスCSS
 /* -------------------------------------------- */
 /* w_ad,support,w_point,w_production,w_schedule */
 /* -------------------------------------------- */
+/* w_ad */
 /*layout*/
 #w_ad {
   padding : 125px 0 90px;
@@ -283,14 +266,14 @@ Style Info:     ウェブビジネスCSS
   height : 200px;
   background : #fff;
   box-shadow : 10px 10px 10px 0 rgba(0, 0, 0, .16);
-  padding : 53px 20px;
+  padding : 35px;
 }
 #support p {
   line-height : 1.5;
 }
 #support::after {
   content : '';
-  width : 1350px;
+  width : 1360px;
   height : 100%;
   left : 0;
   bottom : 0;
@@ -303,7 +286,7 @@ Style Info:     ウェブビジネスCSS
   position : relative;
 }
 #support .content_wrapper:nth-last-child(2) {
-  margin-bottom : 90px;
+  margin-bottom : 30px;
   padding-right : 31px;
 }
 #support .content_wrapper:nth-last-child(1) img {
@@ -385,14 +368,15 @@ Style Info:     ウェブビジネスCSS
   height : 360px;
   background : #fff;
   padding : 30px 45px;
+  text-align : center;
 }
 .w_item dt {
   font-size : 25px;
   font-weight : bold;
   margin-bottom : 30px;
+  text-align : left;
 }
 .w_item .desc {
-  text-align : center;
   margin-bottom : 60px;
   font-size : 20px;
   white-space : nowrap;
@@ -400,11 +384,15 @@ Style Info:     ウェブビジネスCSS
 }
 .w_item .content_text {
   line-height : 1.5;
+  text-align : left;
 }
 #w_point .w_item li {
   list-style-type : disc;
   list-style-position : outside;
-  margin-left : 20px;
+  margin-left : 40px;
+}
+#w_point .w_item:nth-of-type(2) .content_text li {
+  margin-left : 70px;
 }
 /* w_schedule */
 /*heading*/
@@ -431,4 +419,9 @@ Style Info:     ウェブビジネスCSS
 #w_schedule dt {
   margin-bottom : 35px;
   font-weight : bold;
+}
+@media screen and (max-width:1680px) {
+  #support::after {
+    width : 76%;
+  }
 }

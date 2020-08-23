@@ -12,11 +12,11 @@ Style Info:     ビューティCSS
 .heading_r,.heading_l {
   margin-bottom : 35px;
 }
-#machine .heading_r::before {
-  content : 'Machine';
+#equipment .heading_r::before {
+  content : 'Equipment';
 }
-#cosmetics .heading_l::before {
-  content : 'Cosmetics';
+#cosmetic .heading_l::before {
+  content : 'Cosmetic';
   z-index : -1;
 }
 #media .heading_r::before {
@@ -81,18 +81,23 @@ Style Info:     ビューティCSS
   text-align : right;
 }
 /* -------------------------------------------- */
-/* machine,cosmetics,media */
+/* equipment,cosmetic,media */
 /* -------------------------------------------- */
-#machine,#cosmetics,#media {
+/*layout*/
+#equipment,#cosmetic,#media {
   padding : 110px 0 80px;
 }
 .container {
   margin-top : 75px;
   position : relative;
 }
-.machine_list {
+/* equipment */
+.equipment_list {
   display : flex;
   flex-wrap : wrap;
+}
+.item img {
+  padding-right : 24px;
 }
 .m_contents {
   width : 690px;
@@ -135,6 +140,8 @@ Style Info:     ビューティCSS
 .item .txt {
   line-height : 2;
 }
+/* cosmetic */
+/*slider*/
 .swiper-container {
   height : 500px;
 }
@@ -153,22 +160,47 @@ Style Info:     ビューティCSS
   left : 55%;
   width : 230px;
   opacity : 1;
-  transition : all .1s ease-in .3s;
+  transition : all 1.5s ease-in .3s;
 }
-.swiper-slide-active .s_heading p {
+.swiper-slide-active .s_heading .opacity-in {
   line-height : 2;
 }
+.swiper-slide-active .s_heading .opacity-in {
+  opacity : 0;
+}
+/*caption animation*/
+.swiper-slide-active .s_heading .opacity-in {
+  -webkit-animation-duration : 1.6s;
+          animation-duration : 1.6s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : opacityIn;
+          animation-name : opacityIn;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
+.swiper-slide-active .s_heading .slideIn-right {
+  opacity : 0;
+}
+.swiper-slide-active .s_heading .slideIn-right {
+  -webkit-animation-duration : 1.8s;
+          animation-duration : 1.8s;
+  -webkit-animation-fill-mode : both;
+          animation-fill-mode : both;
+  -webkit-animation-name : slideInRight;
+          animation-name : slideInRight;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+}
 .slide1 {
-  background-image : url(../img/cosmetic_1.png);
+  background-image : url(../img/beauty/cosmetic_1.png);
 }
 .slide2 {
-  background-image : url(../img/cosmetic_2.png);
+  background-image : url(../img/beauty/cosmetic_2.png);
 }
 .slide3 {
-  background-image : url(../img/cosmetic_3.png);
+  background-image : url(../img/beauty/cosmetic_3.png);
 }
 .slide4 {
-  background-image : url(../img/cosmetic_4.jpg);
+  background-image : url(../img/beauty/cosmetic_4.jpg);
 }  
 .swiper-pagination-bullet {
   background : transparent;
@@ -191,6 +223,7 @@ Style Info:     ビューティCSS
   padding : 2px 6px;
   margin-bottom : 14px;
 }
+/*slider button*/
 .s_btn {
   position : absolute;
   bottom : 30px;
@@ -207,15 +240,19 @@ Style Info:     ビューティCSS
   z-index : 1;
 }
 .btn_prev {
-  background : url(../img/c_prev.png);
+  background : url(../img/beauty/c_prev.png);
   left : 10px ;
   right : auto;
 }
 .btn_next {
-  background : url(../img/c_next.png);
+  background : url(../img/beauty/c_next.png);
   right : 10px;
   left : auto;
-}  
+} 
+.swiper-button-next,.swiper-button-prev {
+  display : none;
+}
+/* media */
 #media .content_wrapper {
   display : flex;
   justify-content : space-between;
@@ -223,6 +260,12 @@ Style Info:     ビューティCSS
 }
 .img_list {
   display : flex;
+}
+.img_list img {
+  transition : all .3s ease 0s;
+}
+.img_list img:hover {
+  opacity : .6;
 }
 #media .content_text {
   width : 367px;
@@ -241,7 +284,7 @@ Style Info:     ビューティCSS
   height : 1px;
   background-color : black;
   position : absolute;
-  left : 75%;
+  left : 68%;
   top : 50%;
   transform : translate(25%, -50%);
   transition : 1s;
@@ -253,7 +296,7 @@ Style Info:     ビューティCSS
   height : 1px;
   background-color : black;
   position : absolute;
-  left : 77.5%;
+  left : 71%;
   top : 50%;
   transform : translate(100%, -4px) rotate(45deg);
   transition : 1s;
@@ -262,8 +305,5 @@ Style Info:     ビューティCSS
   background-color : white;
 }
 #media .link_btn {
-  padding : 10px 60px;
-}
-.swiper-button-next, .swiper-button-prev {
-    display: none;
+  padding : 10px 60px 10px 40px;
 }
