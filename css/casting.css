@@ -40,6 +40,10 @@ Style Info:     キャスティングCSS
   color : #fff;
   padding : 5px 14px;
 }
+.color_1 {
+  color : #3162e6;
+  line-height : 0;
+}
 /* ------------------------------------ */
 /* top visual */
 /* ------------------------------------ */
