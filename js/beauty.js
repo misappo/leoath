@@ -36,6 +36,12 @@ var mySwiper = new Swiper('.swiper-container', {
     },
     speed: 600,
     spaceBetween: 230,
+    on: {
+        transitionStart: function () {
+            ResetText();
+            StartTextAnimation();
+        },
+    },
 },
     false);
 $(".swiper-container").hover(function () {
@@ -83,9 +89,24 @@ $(function ($) {
         }
     });
 });
-setTimeout(function () {
-    $('#cosmetic').find('.textAnimation').textAnimation();
-}, 1000);
-setTimeout(function () {
-    $('#cosmetic').find('.textAnimation-delay').textAnimation();
-}, 2500);
+
+function StartTextAnimation() {
+    var active_tag = $('#cosmetic .swiper-slide-active');
+        setTimeout(function () {
+            SetAnimation(active_tag.find('.textAnimation'));
+        }, 1000);
+
+        setTimeout(function () {
+            SetAnimation(active_tag.find('.textAnimation-delay'));
+        }, 2500);
+}
+
+function SetAnimation(target) {
+    target.find('h6').text(target.find('h6').attr("data-text"));
+    target.textAnimation();
+}
+
+function ResetText() {
+    $('#cosmetic .textAnimation').find('h6').find('span').remove();
+    $('#cosmetic .textAnimation-delay').find('h6').find('span').remove();
+}
