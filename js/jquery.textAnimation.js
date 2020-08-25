@@ -148,8 +148,8 @@
 						transform: 'scale(' + 1 + ')',
 						letterSpacing: defaultCss.letterSpacing,
 						opacity: 1,
-						paddingTop: '5px',
-						paddingBottom: '5px',
+						//paddingTop: '5px',
+						//paddingBottom: '5px',
 					});
 				}, delay * (isRandom.delay ? random.delay : i));
 			});

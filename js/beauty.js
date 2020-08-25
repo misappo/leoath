@@ -83,3 +83,9 @@ $(function ($) {
         }
     });
 });
+setTimeout(function () {
+    $('#cosmetic').find('.textAnimation').textAnimation();
+}, 1000);
+setTimeout(function () {
+    $('#cosmetic').find('.textAnimation-delay').textAnimation();
+}, 2500);

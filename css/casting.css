@@ -376,3 +376,26 @@ Style Info:     キャスティングCSS
 #d_contact .btn {
   padding-right : 250px;
 }
+/*animation*/
+.textAnimation,.textAnimation-delay {
+  height : 49px;
+}
+.textAnimation span,.textAnimation-delay span {
+  padding-top : 5px;
+  padding-bottom : 5px;
+}
+.textAnimation {
+  margin-bottom : 5px;
+}
+.textAnimation span:first-child {
+  padding-left : 14px;
+}
+.textAnimation span:last-child {
+  padding-right : 14px;
+}
+.textAnimation-delay span:first-child {
+  padding-left : 14px;
+}
+.textAnimation-delay span:last-child {
+  padding-right : 14px;
+}

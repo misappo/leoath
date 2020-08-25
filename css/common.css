@@ -563,27 +563,11 @@ h4 {
 .textAnimation,.textAnimation-delay {
   position : relative;
   display : inline-block;
-  height : 49px;
   opacity : 0;
   color : #fff;
   -webkit-transform : translate3d(0, 0, 0);
       -ms-transform : translate3d(0, 0, 0);
           transform : translate3d(0, 0, 0);
-}
-.textAnimation {
-  margin-bottom : 5px;
-}
-.textAnimation span:first-child {
-  padding-left : 14px;
-}
-.textAnimation span:last-child {
-  padding-right : 14px;
-}
-.textAnimation-delay span:first-child {
-  padding-left : 14px;
-}
-.textAnimation-delay span:last-child {
-  padding-right : 14px;
 }
 .strech_right::before {
   opacity : 0;

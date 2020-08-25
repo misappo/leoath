@@ -151,6 +151,56 @@ Style Info:     ビューティCSS
   width : 428px;
   height : 420px;
 }
+.swiper-slide-active .s_heading .textAnimation,.swiper-slide-active .s_heading .textAnimation-delay {
+  position : relative;
+  display : inline-block;
+  height : 30px;
+  opacity : 0;
+  color : #fff;
+  -webkit-transform : translate3d(0, 0, 0);
+      -ms-transform : translate3d(0, 0, 0);
+          transform : translate3d(0, 0, 0);
+}
+.swiper-slide-active .s_heading .strech_right {
+  font-family : azo-sans-web, sans-serif;
+  font-size : 20px;
+  font-weight : bold;
+}
+.swiper-slide-active .s_heading .strech_right::before {
+  content : '';
+  position : absolute;
+  display : inline-block;
+  background : #2e75b6;
+  color : #000;
+  width : 0;
+  height : 100%;
+  z-index : -1;
+  left : 0;
+  top : 0;
+  transition-timing-function : cubic-bezier(.23, 1, .32, 1);
+          animation : strech-right 2s ease-in-out;
+  -webkit-animation : strech-right 2s ease 0s 1 normal forwards;
+          animation : strech-right 2s ease 0s 1 normal forwards;
+}
+.textAnimation {
+  margin-bottom : 4px;
+}
+.textAnimation span,.textAnimation-delay span {
+  padding-top : 2px;
+  padding-bottom : 2px;
+}
+.textAnimation span:first-child {
+  padding-left : 3px;
+}
+.textAnimation span:last-child {
+  padding-right : 3px;
+}
+.textAnimation-delay span:first-child {
+  padding-left : 3px;
+}
+.textAnimation-delay span:last-child {
+  padding-right : 3px;
+}
 .s_heading {
   opacity : 0;
 }
@@ -165,9 +215,6 @@ Style Info:     ビューティCSS
 .swiper-slide-active .s_heading .opacity-in {
   line-height : 2;
 }
-.swiper-slide-active .s_heading .opacity-in {
-  opacity : 0;
-}
 /*caption animation*/
 .swiper-slide-active .s_heading .opacity-in {
   -webkit-animation-duration : 1.6s;
@@ -177,9 +224,6 @@ Style Info:     ビューティCSS
   -webkit-animation-name : opacityIn;
           animation-name : opacityIn;
   transition-timing-function : cubic-bezier(.23, 1, .32, 1);
-}
-.swiper-slide-active .s_heading .slideIn-right {
-  opacity : 0;
 }
 .swiper-slide-active .s_heading .slideIn-right {
   -webkit-animation-duration : 1.8s;
